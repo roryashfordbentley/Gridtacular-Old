@@ -1,0 +1,556 @@
+h1, h2, h3 {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.grid {
+  box-sizing: border-box;
+  display: flex;
+  margin-left: -12px;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+}
+
+.grid > * {
+  box-sizing: border-box;
+  padding-left: 12px;
+  display: flex;
+  position: relative;
+}
+
+.grid--no-gutter {
+  margin-left: 0;
+}
+
+.grid--no-gutter > * {
+  padding-left: 0;
+}
+
+.grid--v-top {
+  align-items: flex-start;
+}
+
+.grid--v-center {
+  align-items: center;
+}
+
+.grid--v-bottom {
+  align-items: flex-end;
+}
+
+.grid--v-stretch {
+  align-items: stretch;
+}
+
+.grid--v-baseline {
+  align-items: stretch;
+}
+
+.grid--align-start {
+  justify-content: flex-start;
+}
+
+.grid--align-end {
+  justify-content: flex-end;
+}
+
+.grid--align-center {
+  justify-content: center;
+}
+
+.grid--align-space-between {
+  justify-content: space-between;
+}
+
+.grid--align-space-around {
+  justify-content: space-around;
+}
+
+.span--fit {
+  flex: 1 0;
+}
+
+.span--1-12 {
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.span--1-6, .span--2-12 {
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.span--1-4, .span--3-12 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.span--1-3, .span--2-6, .span--4-12 {
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.span--5-12 {
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+.span--1-2, .span--2-4, .span--3-6, .span--6-12 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.span--7-12 {
+  flex-basis: 58.33333%;
+  max-width: 58.33333%;
+}
+
+.span--2-3, .span--4-6, .span--8-12 {
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.span--3-4, .span--9-12 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.span--5-6, .span--10-12 {
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.span--11-12 {
+  flex-basis: 91.66667%;
+  max-width: 91.66667%;
+}
+
+.span--1-1, .span--2-2, .span--3-3, .span--4-4, .span--6-6, .span--12-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.span--omega {
+  float: right;
+}
+
+@media (min-width: 800px) {
+  .grid {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: -12px;
+    flex-direction: row;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+  }
+  .grid > * {
+    box-sizing: border-box;
+    padding-left: 12px;
+    display: flex;
+    position: relative;
+  }
+  .grid--no-gutter--m {
+    margin-left: 0;
+  }
+  .grid--no-gutter--m > * {
+    padding-left: 0;
+  }
+  .grid--v-top--m {
+    align-items: flex-start;
+  }
+  .grid--v-center--m {
+    align-items: center;
+  }
+  .grid--v-bottom--m {
+    align-items: flex-end;
+  }
+  .grid--v-stretch--m {
+    align-items: stretch;
+  }
+  .grid--v-baseline--m {
+    align-items: stretch;
+  }
+  .grid--align-start--m {
+    justify-content: flex-start;
+  }
+  .grid--align-end--m {
+    justify-content: flex-end;
+  }
+  .grid--align-center--m {
+    justify-content: center;
+  }
+  .grid--align-space-between--m {
+    justify-content: space-between;
+  }
+  .grid--align-space-around--m {
+    justify-content: space-around;
+  }
+  .span--fit--m {
+    flex: 1 0;
+  }
+  .span--1-12--m {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+  .span--1-6--m, .span--2-12--m {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+  .span--1-4--m, .span--3-12--m {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .span--1-3--m, .span--2-6--m, .span--4-12--m {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .span--5-12--m {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+  .span--1-2--m, .span--2-4--m, .span--3-6--m, .span--6-12--m {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .span--7-12--m {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+  .span--2-3--m, .span--4-6--m, .span--8-12--m {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+  .span--3-4--m, .span--9-12--m {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+  .span--5-6--m, .span--10-12--m {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+  .span--11-12--m {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+  .span--1-1--m, .span--2-2--m, .span--3-3--m, .span--4-4--m, .span--6-6--m, .span--12-12--m {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .span--omega--m {
+    float: right;
+  }
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: -12px;
+    flex-direction: row;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+  }
+  .grid > * {
+    box-sizing: border-box;
+    padding-left: 12px;
+    display: flex;
+    position: relative;
+  }
+  .grid--no-gutter--l {
+    margin-left: 0;
+  }
+  .grid--no-gutter--l > * {
+    padding-left: 0;
+  }
+  .grid--v-top--l {
+    align-items: flex-start;
+  }
+  .grid--v-center--l {
+    align-items: center;
+  }
+  .grid--v-bottom--l {
+    align-items: flex-end;
+  }
+  .grid--v-stretch--l {
+    align-items: stretch;
+  }
+  .grid--v-baseline--l {
+    align-items: stretch;
+  }
+  .grid--align-start--l {
+    justify-content: flex-start;
+  }
+  .grid--align-end--l {
+    justify-content: flex-end;
+  }
+  .grid--align-center--l {
+    justify-content: center;
+  }
+  .grid--align-space-between--l {
+    justify-content: space-between;
+  }
+  .grid--align-space-around--l {
+    justify-content: space-around;
+  }
+  .span--fit--l {
+    flex: 1 0;
+  }
+  .span--1-12--l {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+  .span--1-6--l, .span--2-12--l {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+  .span--1-4--l, .span--3-12--l {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .span--1-3--l, .span--2-6--l, .span--4-12--l {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .span--5-12--l {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+  .span--1-2--l, .span--2-4--l, .span--3-6--l, .span--6-12--l {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .span--7-12--l {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+  .span--2-3--l, .span--4-6--l, .span--8-12--l {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+  .span--3-4--l, .span--9-12--l {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+  .span--5-6--l, .span--10-12--l {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+  .span--11-12--l {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+  .span--1-1--l, .span--2-2--l, .span--3-3--l, .span--4-4--l, .span--6-6--l, .span--12-12--l {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .span--omega--l {
+    float: right;
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: -12px;
+    flex-direction: row;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+  }
+  .grid > * {
+    box-sizing: border-box;
+    padding-left: 12px;
+    display: flex;
+    position: relative;
+  }
+  .grid--no-gutter--xl {
+    margin-left: 0;
+  }
+  .grid--no-gutter--xl > * {
+    padding-left: 0;
+  }
+  .grid--v-top--xl {
+    align-items: flex-start;
+  }
+  .grid--v-center--xl {
+    align-items: center;
+  }
+  .grid--v-bottom--xl {
+    align-items: flex-end;
+  }
+  .grid--v-stretch--xl {
+    align-items: stretch;
+  }
+  .grid--v-baseline--xl {
+    align-items: stretch;
+  }
+  .grid--align-start--xl {
+    justify-content: flex-start;
+  }
+  .grid--align-end--xl {
+    justify-content: flex-end;
+  }
+  .grid--align-center--xl {
+    justify-content: center;
+  }
+  .grid--align-space-between--xl {
+    justify-content: space-between;
+  }
+  .grid--align-space-around--xl {
+    justify-content: space-around;
+  }
+  .span--fit--xl {
+    flex: 1 0;
+  }
+  .span--1-12--xl {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+  .span--1-6--xl, .span--2-12--xl {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+  .span--1-4--xl, .span--3-12--xl {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .span--1-3--xl, .span--2-6--xl, .span--4-12--xl {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .span--5-12--xl {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+  .span--1-2--xl, .span--2-4--xl, .span--3-6--xl, .span--6-12--xl {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .span--7-12--xl {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+  .span--2-3--xl, .span--4-6--xl, .span--8-12--xl {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+  .span--3-4--xl, .span--9-12--xl {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+  .span--5-6--xl, .span--10-12--xl {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+  .span--11-12--xl {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+  .span--1-1--xl, .span--2-2--xl, .span--3-3--xl, .span--4-4--xl, .span--6-6--xl, .span--12-12--xl {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .span--omega--xl {
+    float: right;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "open sans", helvetica, arial, sans-serif;
+  color: #323947;
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.content {
+  padding: 3rem 0;
+}
+
+.btn {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 0rem;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #e6f3ff;
+  transition: all 0.3s ease 0s;
+  border-radius: 0.3rem;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.sidebar-header {
+  background: #008aff;
+  color: #fff;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.site-title {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-title__heading {
+  font-size: 2rem;
+}
+
+.downloads__btn {
+  width: 100%;
+}
+
+.example-grid {
+  background: #f2f2f2;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.example-grid__content {
+  background: #008aff;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+}
+
+.example-grid__content--tall {
+  padding: 2rem 0;
+}

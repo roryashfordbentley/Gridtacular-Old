@@ -1,0 +1,49 @@
+$grid_args:(
+    config: (
+        gridclass:           'grid',
+        columnclass:         'span--',
+        pushclass:           'push--',
+        debug:               false,
+        classdebug:          false
+    ),
+    grids: (
+        small: (
+            columns:         12,
+            suffix:          null,
+            gutter:          12px,
+            debug_name:      'Small',
+            debug_bg:        #eac11f,
+        ),
+        medium: (
+            columns:        12,
+            suffix:         '--m',
+            breakpoint_min: 800px,
+            breakpoint_max: null,
+            gutter:         12px,
+            debug_name:     'Medium',
+            debug_bg:       #0c9c2e,
+        ),
+        large: (
+            columns:        12,
+            suffix:         '--l',
+            breakpoint_min: 1100px,
+            breakpoint_max: null,
+            gutter:         12px,
+            debug_name:     'Large',
+            debug_bg:       #1a4cf1,
+        ),
+        xlarge: (
+            columns:        12,
+            suffix:         '--xl',
+            breakpoint_min: 1400px,
+            breakpoint_max: null,
+            gutter:         12px,
+            debug_name:     'X-Large',
+            debug_bg:       #ea121d,
+        )
+    )
+);
+
+// Instantiate Gritacular grid
+// using the above options
+@include grid_generate($grid_args);

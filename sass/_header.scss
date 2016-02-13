@@ -1,6 +1,11 @@
 .site-header{
-	background: $yellow;
+	background: $primary;
 	color: #fff;
 	width: 100%;
-	padding: 2rem 1rem;
+	padding: 0.5rem 1rem;
 }
+
+	.site-header__title{
+		margin: 0;
+		font-size: 1.8rem;
+	}

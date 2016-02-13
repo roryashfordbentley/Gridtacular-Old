@@ -5,7 +5,13 @@
 }
 
 .sidebar-nav{
-	padding: 3rem;
+	padding: 3rem 1rem;
+	@include at-breakpoint(800px){
+		padding: 3rem 1.2rem;
+	}
+	@include at-breakpoint(1100px){
+		padding: 3rem;
+	}
 
 }
 

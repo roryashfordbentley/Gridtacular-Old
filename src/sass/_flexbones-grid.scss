@@ -189,6 +189,19 @@
     }
 }
 
+////
+// Apply display: flex to grid items
+// could allow for nesting but also allows content
+// to span 100% of its containers height which is
+// useful when using the stretch behavior on
+// siblings
+////
+@mixin grid-item-flex($item_class,$suffix: null){
+    #{$item_class}flex#{$suffix}{
+        display: flex;
+    }
+}
+
 
 ////
 // Equivalent Fractions
@@ -489,6 +502,7 @@
                 @include grid-vertical-align($grid_prefix,$suffix);
                 @include grid-justify-content($grid_prefix,$suffix);
                 @include grid-item-fit($item_prefix,$suffix);
+                @include grid-item-flex($item_prefix,$suffix);
                 @include grid-items($item_prefix,$suffix,$items);
                 
 

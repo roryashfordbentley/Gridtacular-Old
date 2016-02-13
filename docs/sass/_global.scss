@@ -6,7 +6,7 @@
 $yellow: #008aff;
 $grey: #ccc;
 $navy: #323947;
-$text: $navy;
+$text: #545454;
 $primary: $yellow;
 
 *{
@@ -18,7 +18,7 @@ $primary: $yellow;
 html{
     font-family: "open sans", helvetica, arial, sans-serif;
     color: $text;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
     .wrapper{
@@ -30,20 +30,18 @@ html{
             padding: 3rem 0;
         }
 
-    .btn{
+    .btn,
+    .btn:visited{
         display: block;
-        background: rgba(#000,0.2);
+        background-color: $primary;
         padding: 0.8rem 0rem;
         width: 100%;
         text-align:  center;
         text-decoration: none;
         color: mix(#fff,$primary,90%);
-        transition: all 0.3s ease 0s;
         border-radius: 0.3rem;
         &:hover{
-            background: rgba(#000,0.25);  
+            background: mix(#000,$primary,10%);  
             color: #fff;
         }
     }
-
-

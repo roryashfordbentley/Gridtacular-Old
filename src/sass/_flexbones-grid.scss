@@ -294,36 +294,29 @@
 // Outputs the current breakpoint name to quickly debug 
 // each breakpoint.
 ////
-@mixin grid-debug($breakpoint_name,$debug_bg: #000){
+@mixin grid-debug(){
     body:after{
         box-sizing: border-box;
         position: fixed;
         display: block;
-        height: 24px;
+        //height: 24px;
         bottom: 10px;
         right: 10px;
         padding: 5px 28px 5px 20px;
         font-size: 12px;
         color: #777;
-        content: "#{$breakpoint_name}";
+        //content: "#{$breakpoint_name}";
         border-radius: 3px;
-        background: #f7f7f7;
+        background-color: #f7f7f7;
         box-shadow: 0 2px 2px rgba(#000,0.3);
         z-index:100000;
-    },
-    body:before{
-        content: "";
-        position: fixed;
-        display: block;
-        bottom: 10px;
-        right: 10px;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        width: 8px;
-        height: 24px;
-        background-color: $debug_bg;
-        background: linear-gradient(to right, #f7f7f7, #f7f7f7 15%, $debug_bg 15%, $debug_bg 85%);
-        z-index:100001;
+    }
+}
+
+@mixin grid-debug-responsive($breakpoint_name,$debug_bg: #000){
+    body:after{
+        content: "#{$breakpoint_name}";
+        background: linear-gradient(to right, #f7f7f7, #f7f7f7 90%, $debug_bg 90%, $debug_bg 100%);
     }
 }
 
@@ -424,14 +417,18 @@
         $class_debug_display: $default_class_debug_display;
     }
 
+    // if grid include breakpoint debug box
+    @if($debug_display){ 
+        @include grid-debug();
+    } 
+
     // Check that there are defined grids
-    
     @if( map-has-key($grid_args, grids )) {
         
         // Grid default values
-        $grids:             map-get($grid_args, grids);
-        $item_prefix:     #{'.' + $item_name};
-        $push_prefix:       #{'.' + $push_name};
+        $grids: map-get($grid_args, grids);
+        $item_prefix: #{'.' + $item_name};
+        $push_prefix: #{'.' + $push_name};
         
         @each $grid_name, $grid_map in $grids{
 
@@ -505,7 +502,6 @@
                 @include grid-item-flex($item_prefix,$suffix);
                 @include grid-items($item_prefix,$suffix,$items);
                 
-
                 @if($push){
                     @include grid-push($push_prefix, $suffix, $items);
                 }
@@ -515,13 +511,12 @@
                 }
 
                 @if($debug_display){ 
-                    @include grid-debug($debug_name,$debug_bg);
+                    @include grid-debug-responsive($debug_name,$debug_bg);
                 } 
 
                 @if($class_debug_display){ 
                     @include class-debug($grid_prefix); 
-                } 
-
+                }
             }
         }
 

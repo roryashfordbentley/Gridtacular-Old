@@ -107,7 +107,6 @@
     #{$grid_prefix} > * {
         box-sizing: border-box;
         padding-left: $gutter;
-        display:flex;
         position: relative;
     }
 }
@@ -272,7 +271,7 @@
 ////
 @mixin grid-omega($prefix: null, $suffix: null){
     #{$prefix}omega#{$suffix} {
-        float: right;
+        margin-left: auto;
     }
 }
 
@@ -310,6 +309,7 @@
         width: 8px;
         height: 24px;
         background-color: $debug_bg;
+        background: linear-gradient(to right, #f7f7f7, #f7f7f7 15%, $debug_bg 15%, $debug_bg 85%);
         z-index:100001;
     }
 }

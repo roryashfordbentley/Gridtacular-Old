@@ -32,8 +32,8 @@
 ////
 // Column Width
 // 
-// Works out the percent width of columns (gutters can be 
-// any unit but columns are always percent bases)
+// Works out the percent width of items (gutters can be 
+// any unit but items are always percent bases)
 // 
 // @arg {int} $list - provide a Sass map to be traversed
 // @arg {int} $keys... - provide the array keys per depth comma seperated
@@ -41,9 +41,9 @@
 // @example scss - Map Get Z
 //     map-get-z(map, first-child-key, second-child-key);
 ////
-@function column-width($number_of_columns,$total_columns) {
-    $single_col_width: 100 / $total_columns * 1%;
-    @return $single_col_width * $number_of_columns;
+@function item-width($number_of_items,$total_items) {
+    $single_col_width: 100 / $total_items * 1%;
+    @return $single_col_width * $number_of_items;
 }
 
 
@@ -76,9 +76,9 @@
 // Used to set grids semantically from within 
 // the stylesheet with no additional HTML markup
 ////
-@mixin span-columns($columns, $total_columns){
-    //width: column-width($columns,$total_columns);
-    flex-basis: column-width($columns,$total_columns);
+@mixin span-items($items, $total_items){
+    //width: item-width($items,$total_items);
+    flex-basis: item-width($items,$total_items);
     padding-left: $gutter-width; 
 }
 
@@ -153,7 +153,7 @@
 
 
 ////
-// Control justification of the columns
+// Control justification of the items
 // depends on rtl/ltr settings
 ////
 @mixin grid-justify-content($grid_prefix,$suffix: null){
@@ -181,10 +181,10 @@
 
 
 ////
-// Make columns fill a row
+// Make items fill a row
 ////
-@mixin grid-column-fit($column_class,$suffix: null){
-    #{$column_class}fit#{$suffix}{
+@mixin grid-item-fit($item_class,$suffix: null){
+    #{$item_class}fit#{$suffix}{
         flex: 1 0;
     }
 }
@@ -212,29 +212,29 @@
 ////
 // Grid Columns
 // 
-// Set the grid column widths based on the number of 
-// columns divided by the total number of columns.
+// Set the grid item widths based on the number of 
+// items divided by the total number of items.
 ////
-@mixin grid-columns($prefix: null, $suffix: null, $columns: null){
-    // Loop through the total grid columns
+@mixin grid-items($prefix: null, $suffix: null, $items: null){
+    // Loop through the total grid items
     
-    @for $i from 1 through $columns{
-        $css_classes: equivalent-fractions($i,$columns);
-        $column_class: null;
+    @for $i from 1 through $items{
+        $css_classes: equivalent-fractions($i,$items);
+        $item_class: null;
         
         // Generate classes from Equivilant fractions
 
         @each $key, $css_class in $css_classes{
             $full_css_class: #{$prefix}#{$css-class}#{$suffix};
-            $column_class: $column_class, $full_css_class;
+            $item_class: $item_class, $full_css_class;
         }
         
-        // Output column classes
+        // Output item classes
 
-        #{$column_class}{
-            //width: column-width($i,$columns);
-            flex-basis: column-width($i,$columns);
-            max-width: column-width($i,$columns);
+        #{$item_class}{
+            //width: item-width($i,$items);
+            flex-basis: item-width($i,$items);
+            max-width: item-width($i,$items);
         }
     }
 
@@ -244,11 +244,11 @@
 // Push Class
 //
 // Set the push classes that will incrementally indent
-// the column by a maximum number of total-columns -1
+// the item by a maximum number of total-items -1
 ////
-@mixin grid-push($prefix: null, $suffix: null, $columns: null){
-    @for $i from 1 through $columns - 1{
-        $css_classes: equivalent-fractions($i,$columns);
+@mixin grid-push($prefix: null, $suffix: null, $items: null){
+    @for $i from 1 through $items - 1{
+        $css_classes: equivalent-fractions($i,$items);
         $push_class: null;
         
         @each $key, $css_class in $css_classes{
@@ -257,7 +257,7 @@
         }
         
         #{$push_class}{
-            margin-left: column-width($i,$columns);
+            margin-left: item-width($i,$items);
         }
     }
 }
@@ -349,7 +349,7 @@
     // Set variable defaults
 
     $default_grid_name:     "grid";
-    $default_column_name:   "span--";
+    $default_item_name:   "span--";
     $default_push:          false;
     $default_push_name:     "push--";
     $default_omega:         true;
@@ -369,11 +369,11 @@
         $grid_prefix: #{'.' + $grid_name}
     }
 
-    // If column class has been defined
-    @if ( map-has-key(map-get($grid_args, config), columnclass) ) {
-        $column_name: map-get-z($grid_args, config, columnclass)
+    // If item class has been defined
+    @if ( map-has-key(map-get($grid_args, config), itemclass) ) {
+        $item_name: map-get-z($grid_args, config, itemclass)
     } @else {
-        $column_name: $default_column_name;
+        $item_name: $default_item_name;
     }
 
     //If push has been defined
@@ -417,14 +417,14 @@
         
         // Grid default values
         $grids:             map-get($grid_args, grids);
-        $column_prefix:     #{'.' + $column_name};
+        $item_prefix:     #{'.' + $item_name};
         $push_prefix:       #{'.' + $push_name};
         
         @each $grid_name, $grid_map in $grids{
 
             // Set defaults
 
-            $default_columns:           12;
+            $default_items:           12;
             $default_suffix:            null;
             $default_breakpoint_min:    null;
             $default_breakpoint_max:    null;
@@ -432,14 +432,14 @@
             $default_debug_bg:          #000;
             $default_debug_name:        $grid_name;
 
-            // If column class has been defined
-            @if ( map-has-key($grid_map, columns) ) {
-                $columns: map-get($grid_map,columns);
+            // If item class has been defined
+            @if ( map-has-key($grid_map, items) ) {
+                $items: map-get($grid_map,items);
             } @else {
-                $columns: $default_columns;
+                $items: $default_items;
             }
 
-            // If column class has been defined
+            // If item class has been defined
             @if ( map-has-key($grid_map, suffix) ) {
                 $suffix: map-get($grid_map,suffix)
             } @else {
@@ -488,16 +488,16 @@
                 @include grid-no-gutter($grid_prefix,$suffix);
                 @include grid-vertical-align($grid_prefix,$suffix);
                 @include grid-justify-content($grid_prefix,$suffix);
-                @include grid-column-fit($column_prefix,$suffix);
-                @include grid-columns($column_prefix,$suffix,$columns);
+                @include grid-item-fit($item_prefix,$suffix);
+                @include grid-items($item_prefix,$suffix,$items);
                 
 
                 @if($push){
-                    @include grid-push($push_prefix, $suffix, $columns);
+                    @include grid-push($push_prefix, $suffix, $items);
                 }
                 
                 @if($omega){
-                    @include grid-omega($column_prefix, $suffix);
+                    @include grid-omega($item_prefix, $suffix);
                 }
 
                 @if($debug_display){ 

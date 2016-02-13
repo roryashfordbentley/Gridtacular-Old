@@ -662,15 +662,6 @@ html {
   font-size: 1.8rem;
 }
 
-.site-title {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.site-title__heading {
-  font-size: 2rem;
-}
-
 .downloads {
   width: 100%;
 }
@@ -679,19 +670,6 @@ html {
   width: 100%;
 }
 
-/*
-<nav class="sidebar-nav">
-    <ul class="nav-list">
-        <li class="nav-list__item"><a href="#introduction">Introduction</a></li>
-        <li class="nav-list__item"><a href="#grid-setup">Grid Setup</a></li>
-        <li class="nav-list__item"><a href="#example-grid">Example Grid</a></li>
-        <li class="nav-list__item"><a href="#automagic-widths">Automagic Widths</a></li>
-        <li class="nav-list__item"><a href="#vertical-alignment">Vertical Alignment</a></li>
-        <li class="nav-list__item"><a href="#justify-content">Justify Content</a></li>
-        <li class="nav-list__item"><a href="#nested-grids">Nested Grids</a></li>
-    </ul>
-</nav>
- */
 .sidebar-nav {
   padding: 2rem 0;
   /*@include at-breakpoint(1100px){

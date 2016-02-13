@@ -1,7 +1,9 @@
-@import "_typography";
+@import "_global";
 @import "../../src/sass/_flexbones-grid";
 @import "_grid-settings";
-@import "_global";
+@import "_typography";
 @import "_header";
 @import "_sidebar";
 @import "_content";
+@import "_prism";
+@import "_prism-solarized-theme";

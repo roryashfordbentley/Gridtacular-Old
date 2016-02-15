@@ -1,0 +1,48 @@
+// Demo styles m8
+
+// Vars
+
+// Colours
+$yellow: #008aff;
+$grey: #ccc;
+$navy: #323947;
+$text: #545454;
+$primary: $yellow;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "open sans", helvetica, arial, sans-serif;
+    color: $text;
+    line-height: 1.8;
+}
+
+    .wrapper{
+        margin: 0 auto;
+        width: 85%;
+    }
+
+        .content{
+            padding: 3rem 0;
+            max-width: 45rem;
+        }
+
+    .btn,
+    .btn:visited{
+        display: block;
+        background-color: $primary;
+        padding: 0.8rem 0rem;
+        width: 100%;
+        text-align:  center;
+        text-decoration: none;
+        color: mix(#fff,$primary,90%);
+        border-radius: 0.3rem;
+        &:hover{
+            background: mix(#000,$primary,10%);  
+            color: #fff;
+        }
+    }

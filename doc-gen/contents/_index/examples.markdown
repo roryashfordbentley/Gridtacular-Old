@@ -1,6 +1,4 @@
-
 # Examples
-
 
 ## [Basic Grid Example](#nav-basic-grid-example)
 
@@ -86,7 +84,6 @@ Fit any number to column in a given space. Works responsively so you can use 'sp
         <div class="span--1-1  span--1-3--m  span--v--center">
             <div class="example-grid__content">3</div>  
         </div>
-        
     </div>
 </div>
 

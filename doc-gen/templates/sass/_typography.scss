@@ -1,0 +1,65 @@
+// Fonts and stuff 
+h1,h2,h3{
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+    h3[id^=nav-]{
+        &:before{
+            content: "#";
+            color: $primary;
+            padding-right: 0.5rem;
+        }
+    }
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    margin-bottom: 2rem;
+}
+
+    p:last-child{
+        margin-bottom: 0;  
+    }
+
+a,a:visited{
+    color: $primary;
+    text-decoration: none;
+}
+
+    a:hover{
+        color: mix($primary, #000,90%);
+    }
+
+p a,
+p a:visited{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%, #ddd 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 20px;
+}
+
+    p a:hover{
+         background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%, #bbb 50%);
+    }
+
+pre{
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+    p code{
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 0.1rem 0.3rem;
+    }

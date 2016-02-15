@@ -31,7 +31,6 @@ grids: (
 
 @include grid_generate($grid_args);</code></pre>
 
-
 ## [Markup](#nav-markup)
 
 The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.

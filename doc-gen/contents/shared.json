@@ -1,0 +1,23 @@
+{
+	"site-title": "Welcome!",
+	"nav": [
+		{
+			"nav-title": "Introduction",
+			"nav-list": [
+				{"title": "What is it?","href": "#nav-what-is-it"},
+				{"title": "Grid Setup","href": "#nav-grid-setup"},
+				{"title": "Markup","href": "#nav-markup"}
+			]
+		},
+		{
+			"nav-title": "Examples",
+			"nav-list": [
+				{"title":"Basic Grid Example","href":"#nav-basic-grid-example"},
+				{"title":"Automagic Widths","href":"#nav-automagic-widths"},
+				{"title":"Vertical Alignment","href":"#nav-vertical-alignment"},
+				{"title":"Justify Content","href":"#nav-justify-content"},
+				{"title":"Vertical Alignment","href":"#nav-nested-grids"}
+			]
+		}
+	]
+}

@@ -1,6 +1,6 @@
-# Examples
+## Examples
 
-## [Basic Grid Example](#nav-basic-grid-example)
+### [Basic Grid Example](#nav-basic-grid-example)
 
 This grid is 6 columns at Large, 3 columns at Medium and 1 columns at small sizes
 
@@ -28,7 +28,7 @@ This grid is 6 columns at Large, 3 columns at Medium and 1 columns at small size
 </div>
 
 
-## [Automagic Widths](#nav-automagic-widths)
+### [Automagic Widths](#nav-automagic-widths)
 
 Fit any number to column in a given space. Works responsively so you can use 'span--fit--l' for automagic widths at your large breakpoint and define how many columns to span at other sizes
 
@@ -53,9 +53,9 @@ Fit any number to column in a given space. Works responsively so you can use 'sp
 </div>
 
 
-## [Vertical Alignment](#nav-vertical-alignment)
+### [Vertical Alignment](#nav-vertical-alignment)
 
-### Top
+#### Top
 
 <div class="example-grid">
     <div class="grid  grid--v-top">
@@ -71,7 +71,7 @@ Fit any number to column in a given space. Works responsively so you can use 'sp
     </div>
 </div>
 
-### Center
+#### Center
 
 <div class="example-grid">
     <div class="grid  grid--v-center">
@@ -87,7 +87,7 @@ Fit any number to column in a given space. Works responsively so you can use 'sp
     </div>
 </div>
 
-### Bottom
+#### Bottom
 
 <div class="example-grid">
     <div class="grid  grid--v-bottom">
@@ -103,7 +103,7 @@ Fit any number to column in a given space. Works responsively so you can use 'sp
     </div>
 </div>
 
-### Stretch (default behaviour)
+#### Stretch (default behaviour)
 
 If you want the inner element to be 100% of the grid item you must give it a display: flex; attribute, as in the example below.
 
@@ -121,10 +121,10 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-## [Justify Content](#nav-justify-content)
+### [Justify Content](#nav-justify-content)
 
 
-### Justify Start
+#### Justify Start
 
 <div class="example-grid">
     <div class="grid  grid--align-start">
@@ -140,7 +140,7 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-### Justify End
+#### Justify End
 
 <div class="example-grid">
     <div class="grid  grid--align-end">
@@ -156,7 +156,7 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-### Justify Center
+#### Justify Center
 
 <div class="example-grid">
     <div class="grid  grid--align-center">
@@ -172,7 +172,7 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-### Justify space between
+#### Justify space between
 
 <div class="example-grid">
     <div class="grid  grid--align-space-between">
@@ -188,7 +188,7 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-### Justify space around
+#### Justify space around
 
 <div class="example-grid">
     <div class="grid  grid--align-space-around">
@@ -204,7 +204,7 @@ If you want the inner element to be 100% of the grid item you must give it a dis
     </div>
 </div>
 
-## [Nested Grids](#nav-nested-grids)
+### [Nested Grids](#nav-nested-grids)
 
 You can nest grids as deep as you like with no inheritance issues.
 

@@ -12,7 +12,7 @@ h2{
     font-size: 2rem;
 }
 
-    h3[id^=nav-]{
+    h3{
         &:before{
             content: "#";
             color: $primary;

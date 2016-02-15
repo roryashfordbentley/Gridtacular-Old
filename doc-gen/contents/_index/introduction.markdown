@@ -1,18 +1,18 @@
-# Introduction
+## Introduction
 
-## [Gridtacular, What is is?](#nav-what-is-it)
+### Gridtacular, What is it?
 
 Gridtacular is a modular flexbox powered responsive grid system. The grid has been designed from the ground up to adapt to your workflow and naming conventions.
 
 The grid system is customisable via a Sass map which allows you to customise the grid to your requirements in a similar way to many popular javascript libraries.
 
-## [Getting started](#nav-getting-started)
+### [Getting started](#nav-getting-started)
 
 First you need to add the sass files to your project. Include `src/_flexbones-grid.scss` and `src/_grid-settings.scss` in your sass workflow. Both files then need to be imported into your main Sass stylesheet.
 
 You can view the entire source of this demo by browsing the docs/ folder.
 
-## [Grid Setup](#nav-grid-setup)
+### [Grid Setup](#nav-grid-setup)
 
 The most basic setup looks like this:
 
@@ -31,7 +31,7 @@ grids: (
 
 @include grid_generate($grid_args);</code></pre>
 
-## [Markup](#nav-markup)
+### [Markup](#nav-markup)
 
 The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.
 

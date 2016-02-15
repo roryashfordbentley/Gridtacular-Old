@@ -1,5 +1,6 @@
 {
-	"site-title": "Welcome!",
+	"title": "Gridtacular",
+	"strapline": "The Modular, Responsive Flexbox Grid System",
 	"nav": [
 		{
 			"nav-title": "Introduction",

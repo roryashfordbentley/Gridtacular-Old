@@ -1,0 +1,15 @@
+{
+  "name": "Flexbones-Grid",
+  "version": "0.1.0",
+  "description": "Build everything using NPM",
+  "author": "Rory Ashford <rory@roikles.com>",
+  "scripts": {
+    "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded sass/style.scss style.css",
+    "watch": "livereload . -i 3000 & npm run -s watch:sass"
+  },
+  "devDependencies": {
+    "fsmonitor": "^0.2.4",
+    "livereload": "^0.3.7",
+    "node-sass": "^3.4.2"
+  }
+}

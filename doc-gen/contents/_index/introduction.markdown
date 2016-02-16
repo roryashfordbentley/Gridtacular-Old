@@ -2,21 +2,22 @@
 
 ### Gridtacular, What is it?
 
-Gridtacular is a modular flexbox powered responsive grid system. The grid has been designed from the ground up to adapt to your workflow and naming conventions.
+Gridtacular is a modular flexbox powered responsive grid system. I has been designed to adapt to your workflow and naming conventions.
 
 The grid system is customisable via a Sass map which allows you to customise the grid to your requirements in a similar way to many popular javascript libraries.
 
 ### Getting started
 
-First you need to add the sass files to your project. Include `src/_flexbones-grid.scss` and `src/_grid-settings.scss` in your sass workflow. Both files then need to be imported into your main Sass stylesheet.
+First you need to add the sass files to your project. Include <code class="language-scss">src/_flexbones-grid.scss</code> and <code class="language-scss">src/_grid-settings.scss</code> in your sass workflow. Both files then need to be imported into your main Sass stylesheet.
 
-You can view the entire source of this demo by browsing the docs/ folder.
+You can view the entire source of this demo by browsing the <code class="language-html">docs/</code> folder.
 
 ### Grid Setup
 
 The most basic setup looks like this:
 
-<pre><code class="language-scss">$grid_args:(
+```scss
+$grid_args:(
     config: (
         gridclass: 'grid'
         columnclass: 'span--'
@@ -29,13 +30,16 @@ The most basic setup looks like this:
     )
 );
 
-@include grid_generate($grid_args);</code></pre>
+@include grid_generate($grid_args);
+```
 
 ### Markup
 
 The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.
 
-Grid containers by default have a class of <code class="language-scss">.grid</code>. Grid items have a class structure <code class="language-scss">.grid[no of columns to span]-[total columns][breakpoint]</code> e.g. <code class="language-html">&lt;div class="span--1-1 span--1-2--m span--1-4--l"&gt;1&lt;/div&gt;</code>
+Grid containers by default have a class of <code class="language-scss">.grid</code>. Grid items have a class structure <code class="language-scss">.grid[no of columns to span]-[total columns][breakpoint]</code>. 
+
+The following is a simple example ofa responsve grid that has a single item per row at the smallest breakpoint, 2 items per row at the medium breakpoint and 4 items per row at the large breakpoint.
 
 ```html
 <div class="grid">

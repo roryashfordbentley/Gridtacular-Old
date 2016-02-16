@@ -4,13 +4,14 @@
   "description": "Build everything using NPM",
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
-    "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded templates/sass/style.scss templates/style.css & npm run punchgen",
-    "punchserver":"punch server 1337",
-    "watch": "livereload . -i 3000 & npm run -s watch:sass & npm run punchserver"
+    "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded templates/sass/style.scss templates/style.css",
+    "punchserver": "punch server 1337",
+    "watch": "npm run punchserver & npm run watch:sass"
   },
   "devDependencies": {
     "fsmonitor": "^0.2.4",
     "livereload": "^0.3.7",
-    "node-sass": "^3.4.2"
+    "node-sass": "^3.4.2",
+    "npm-run-all": "^1.5.1"
   }
 }

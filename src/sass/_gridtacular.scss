@@ -350,7 +350,7 @@
 // kept seperate from grid-generate as it is DRYer 
 // this way.
 ////
-@mixin grid-generate($grid_args){
+@mixin gridtacular($grid_args){
      
     // Set variable defaults
 
@@ -434,7 +434,7 @@
 
             // Set defaults
 
-            $default_items:           12;
+            $default_items:             12;
             $default_suffix:            null;
             $default_breakpoint_min:    null;
             $default_breakpoint_max:    null;

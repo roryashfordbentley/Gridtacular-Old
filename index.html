@@ -57,84 +57,116 @@
 <h3 id="gridtacular-what-is-it-">Gridtacular, What is it?</h3>
 <p>Gridtacular is a modular flexbox powered responsive grid system. The grid has been designed from the ground up to adapt to your workflow and naming conventions.</p>
 <p>The grid system is customisable via a Sass map which allows you to customise the grid to your requirements in a similar way to many popular javascript libraries.</p>
-<h3 id="-getting-started-nav-getting-started-"><a href="#nav-getting-started">Getting started</a></h3>
+<h3 id="getting-started">Getting started</h3>
 <p>First you need to add the sass files to your project. Include <code>src/_flexbones-grid.scss</code> and <code>src/_grid-settings.scss</code> in your sass workflow. Both files then need to be imported into your main Sass stylesheet.</p>
 <p>You can view the entire source of this demo by browsing the docs/ folder.</p>
-<h3 id="-grid-setup-nav-grid-setup-"><a href="#nav-grid-setup">Grid Setup</a></h3>
+<h3 id="grid-setup">Grid Setup</h3>
 <p>The most basic setup looks like this:</p>
-<pre><code>$grid_args:(
-config: (
-    gridclass: 'grid'
-    columnclass: 'span--'
-),
-grids: (
-    mygrid: (
-        columns: 12,
-        gutter: 2rem
+<pre><code class="language-scss">$grid_args:(
+    config: (
+        gridclass: 'grid'
+        columnclass: 'span--'
+    ),
+    grids: (
+        mygrid: (
+            columns: 12,
+            gutter: 2rem
+        )
     )
-)
 );
 
 @include grid_generate($grid_args);</code></pre>
 
-<h3 id="-markup-nav-markup-"><a href="#nav-markup">Markup</a></h3>
+<h3 id="markup">Markup</h3>
 <p>The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.</p>
-<p>Grid containers by default have a class of <code>.grid</code>. Grid items have a class structure <code>.grid[no of columns to span]-[total columns][breakpoint]</code> e.g. <code>&lt;div class=&quot;span--1-1 span--1-2--m span--1-4--l&quot;&gt;1&lt;/div&gt;</code></p>
-<div class="grid">
-    <div class="span--1-1  span--1-2--m  span--1-4--l">1</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">2</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">3</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">4</div>
+<p>Grid containers by default have a class of <code class="language-scss">.grid</code>. Grid items have a class structure <code class="language-scss">.grid[no of columns to span]-[total columns][breakpoint]</code> e.g. <code class="language-html">&lt;div class=&quot;span--1-1 span--1-2--m span--1-4--l&quot;&gt;1&lt;/div&gt;</code></p>
+<pre><code class="lang-html">&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>which produces a grid like so:</p>
+<div class="example-grid">
+    <div class="grid">
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">1</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">2</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">3</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">4</div>
+        </div>
+    </div>
 </div>
                 <h2 id="examples">Examples</h2>
-<h3 id="-basic-grid-example-nav-basic-grid-example-"><a href="#nav-basic-grid-example">Basic Grid Example</a></h3>
+<h3 id="basic-grid-example">Basic Grid Example</h3>
 <p>This grid is 6 columns at Large, 3 columns at Medium and 1 columns at small sizes</p>
 <div class="example-grid">
     <div class="grid">
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">4</div><br>        </div>
+            <div class="example-grid__content">4</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">5</div><br>        </div>
+            <div class="example-grid__content">5</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--1-6--l">
-            <div class="example-grid__content">6</div><br>        </div>
+            <div class="example-grid__content">6</div>
+        </div>
     </div>
 </div>
 
 
-<h3 id="-automagic-widths-nav-automagic-widths-"><a href="#nav-automagic-widths">Automagic Widths</a></h3>
+<h3 id="automagic-widths">Automagic Widths</h3>
 <p>Fit any number to column in a given space. Works responsively so you can use &#39;span--fit--l&#39; for automagic widths at your large breakpoint and define how many columns to span at other sizes</p>
 <div class="example-grid">
     <div class="grid">
         <div class="span--1-1  span--1-3--m  span--fit--l">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--fit--l">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--fit--l">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--fit--l">
-            <div class="example-grid__content">4</div><br>        </div>
+            <div class="example-grid__content">4</div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--fit--l">
-            <div class="example-grid__content">5</div><br>        </div>
+            <div class="example-grid__content">5</div>
+        </div>
     </div>
 </div>
 
 
-<h3 id="-vertical-alignment-nav-vertical-alignment-"><a href="#nav-vertical-alignment">Vertical Alignment</a></h3>
+<h3 id="vertical-alignment">Vertical Alignment</h3>
 <h4 id="top">Top</h4>
 <div class="example-grid">
     <div class="grid  grid--v-top">
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content  example-grid__content--tall">2</div><br>        </div>
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -142,11 +174,14 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--v-center">
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content  example-grid__content--tall">1</div><br>        </div>
+            <div class="example-grid__content  example-grid__content--tall">1 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content  example-grid__content--tall">2</div><br>        </div>
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -154,11 +189,14 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--v-bottom">
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content  example-grid__content--tall">2</div><br>        </div>
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--v--center">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -167,24 +205,30 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--v-stretch">
         <div class="span--1-1  span--1-3--m  span--flex">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--flex">
-            <div class="example-grid__content">As this column gets taller the other columns within the grid will automagically grow with it!!!</div><br>        </div>
+            <div class="example-grid__content">As this column gets taller the other columns within the grid will automagically grow with it!!! </div>
+        </div>
         <div class="span--1-1  span--1-3--m  span--flex">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
-<h3 id="-justify-content-nav-justify-content-"><a href="#nav-justify-content">Justify Content</a></h3>
+<h3 id="justify-content">Justify Content</h3>
 <h4 id="justify-start">Justify Start</h4>
 <div class="example-grid">
     <div class="grid  grid--align-start">
         <div class="span--1-4">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -192,11 +236,14 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--align-end">
         <div class="span--1-4">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -204,11 +251,14 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--align-center">
         <div class="span--1-4">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -216,11 +266,14 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--align-space-between">
         <div class="span--1-4">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
@@ -228,15 +281,18 @@ grids: (
 <div class="example-grid">
     <div class="grid  grid--align-space-around">
         <div class="span--1-4">
-            <div class="example-grid__content">1</div><br>        </div>
+            <div class="example-grid__content">1 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">2</div><br>        </div>
+            <div class="example-grid__content">2 </div>
+        </div>
         <div class="span--1-4">
-            <div class="example-grid__content">3</div><br>        </div>
+            <div class="example-grid__content">3 </div>
+        </div>
     </div>
 </div>
 
-<h3 id="-nested-grids-nav-nested-grids-"><a href="#nav-nested-grids">Nested Grids</a></h3>
+<h3 id="nested-grids">Nested Grids</h3>
 <p>You can nest grids as deep as you like with no inheritance issues.</p>
 <div class="example-grid">
     <div class="grid">
@@ -247,11 +303,13 @@ grids: (
                         <div class="span--1-1  span--1-2--m">
                             <div class="example-grid__content">
                                 nested
-                            </div><br>                        </div>
+                             </div>
+                        </div>
                         <div class="span--1-1  span--1-2--m">
                             <div class="example-grid__content">
                                 nested
-                            </div><br>                        </div>
+                             </div>
+                        </div>
                     </div>
                 </div> 
             </div> 
@@ -263,11 +321,13 @@ grids: (
                         <div class="span--1-1  span--1-2--m">
                             <div class="example-grid__content">
                                 nested
-                            </div><br>                        </div>
+                             </div>
+                        </div>
                         <div class="span--1-1  span--1-2--m">
                             <div class="example-grid__content">
                                 nested
-                            </div><br>                        </div>
+                             </div>
+                        </div>
                     </div>
                 </div> 
             </div> 

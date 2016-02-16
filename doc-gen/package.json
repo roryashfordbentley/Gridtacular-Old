@@ -5,8 +5,8 @@
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
     "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded templates/sass/style.scss templates/style.css & npm run punchgen",
-    "punchgen":"fsmonitor -d 'sass' -s '+*.scss' punch generate --blank",
-    "watch": "livereload . -i 3000 & npm run -s watch:sass & npm run punchgen"
+    "punchserver":"punch server 1337",
+    "watch": "livereload . -i 3000 & npm run -s watch:sass & npm run punchserver"
   },
   "devDependencies": {
     "fsmonitor": "^0.2.4",

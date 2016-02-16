@@ -6,3 +6,5 @@ output
 
 # Ignore npm package dependencies
 node_modules
+npm-debug.log
+.DS_Store

@@ -1,0 +1,47 @@
+
+.sidebar{
+	background: $primary;
+	width: 100%;
+}
+
+.sidebar-nav{
+	padding: 3rem 1rem;
+	@include at-breakpoint(800px){
+		padding: 3rem 1.2rem;
+	}
+	@include at-breakpoint(1100px){
+		padding: 3rem;
+	}
+
+}
+
+	.sidebar-nav__title{
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: mix(#fff,$primary,70%);
+	}
+	
+	.nav-list{
+		margin: 0;
+		list-style: none;
+		font-weight: 400;
+		line-height: 1.8;
+		margin-bottom: 1rem;
+	}
+
+		.nav-list__item{
+			a,
+			a:visited{
+				text-decoration: none;
+				color: mix(#fff,$primary,90%);
+			    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%, mix(#fff,$primary,70%) 50%);
+			    background-repeat: repeat-x;
+			    background-size: 2px 2px;
+			    background-position: 0 20px;
+				
+			}
+			a:hover{
+		        background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%, #fff 50%);
+		    	color: #fff;
+		    }
+		}

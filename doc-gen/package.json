@@ -5,13 +5,11 @@
   "author": "Rory Ashford <rory@roikles.com>",
   "scripts": {
     "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded templates/sass/style.scss templates/style.css",
-    "punchserver": "punch server 1337",
-    "watch": "npm run punchserver & npm run watch:sass"
+    "up": "punch server"
   },
   "devDependencies": {
     "fsmonitor": "^0.2.4",
     "livereload": "^0.3.7",
-    "node-sass": "^3.4.2",
-    "npm-run-all": "^1.5.1"
+    "node-sass": "^3.4.2"
   }
 }

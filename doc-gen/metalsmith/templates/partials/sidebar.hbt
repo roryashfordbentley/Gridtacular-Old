@@ -1,0 +1,13 @@
+<aside class="sidebar">
+    <nav class="sidebar-nav">
+        {{heading}}
+        {{#each headings}}
+            <h2 class="sidebar-nav__title">{{nav-title}}</h2>
+            <ul class="nav-list">
+                {{#nav-list}}
+                    <li class="nav-list__item"><a href="{{href}}">{{title}}</a></li>    
+                {{/nav-list}}
+            </ul>
+        {{/each}}
+    </nav>
+</aside>

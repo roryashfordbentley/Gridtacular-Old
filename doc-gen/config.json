@@ -2,8 +2,17 @@
 	"template_dir": "templates", 
 	"content_dir": "contents",
 	"output_dir": "../docs",
-
 	"server": { 
 		"port": 9009
-	}
+	},
+    "plugins": {
+        "compilers": {
+            ".css": "punch-sass-compiler" 
+        }
+    },
+    "bundles" : {
+        "style.css": [
+            "/sass/style.scss"
+        ]
+    }
 }

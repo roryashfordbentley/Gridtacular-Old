@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Index</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__content">
+        <h1 class="site-header__title">Index</h1>
+        <p></p>
+        <section class="site-header__downloads">
+            <div class="grid  grid--align-center">
+                <div class="span--1-2">
+                    <a href="https://github.com/roikles/Flexbones-Grid/archive/master.zip" class="btn  downloads__btn">Download</a>
+                </div>
+                <div class="span--1-2">
+                    <a href="https://github.com/roikles/Flexbones-Grid" class="btn  downloads__btn  downloads__btn--github">Github</a>
+                </div>    
+            </div>
+        </section>
+    </div>
+</header>
+<div class="grid">
+    <div class="span--1-1  span--3-12--m  span--flex">
+        
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                
+            </nav>
+        </aside>
+    </div>
+    <div class="span--1-1  span--fit--m">
+    
+        <div class="wrapper">
+            <div class="content">
+                <h2 id="introduction">Introduction</h2>
+<h3 id="gridtacular-what-is-it-">Gridtacular, What is it?</h3>
+<p>Gridtacular is a modular flexbox powered responsive grid system. I has been designed to adapt to your workflow and naming conventions.</p>
+<p>The grid system is customisable via a Sass map which allows you to customise the grid to your requirements in a similar way to many popular javascript libraries.</p>
+<h3 id="getting-started">Getting started</h3>
+<p>First you need to add the sass files to your project. Include <code class="language-scss">src/_flexbones-grid.scss</code> and <code class="language-scss">src/_grid-settings.scss</code> in your sass workflow. Both files then need to be imported into your main Sass stylesheet.</p>
+<p>You can view the entire source of this demo by browsing the <code class="language-html">docs/</code> folder.</p>
+<h3 id="grid-setup">Grid Setup</h3>
+<p>The most basic setup looks like this:</p>
+<pre><code class="lang-scss">$grid_args:(
+    config: (
+        gridclass: &#39;grid&#39;
+        columnclass: &#39;span--&#39;
+    ),
+    grids: (
+        mygrid: (
+            columns: 12,
+            gutter: 2rem
+        )
+    )
+);
+
+@include grid_generate($grid_args);
+</code></pre>
+<h3 id="markup">Markup</h3>
+<p>The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.</p>
+<p>Grid containers by default have a class of <code class="language-scss">.grid</code>. Grid items have a class structure <code class="language-scss">.grid[no of columns to span]-[total columns][breakpoint]</code>. </p>
+<p>The following is a simple example ofa responsve grid that has a single item per row at the smallest breakpoint, 2 items per row at the medium breakpoint and 4 items per row at the large breakpoint.</p>
+<pre><code class="lang-html">&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>which produces a grid like so:</p>
+<div class="example-grid">
+    <div class="grid">
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">1</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">2</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">3</div>
+        </div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">
+            <div class="example-grid__content">4</div>
+        </div>
+    </div>
+</div>
+
+
+
+<h2 id="examples">Examples</h2>
+<h3 id="basic-grid-example">Basic Grid Example</h3>
+<p>This grid is 6 columns at Large, 3 columns at Medium and 1 columns at small sizes</p>
+<div class="example-grid">
+    <div class="grid">
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">1</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">2</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">3</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">4</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">5</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--1-6--l">
+            <div class="example-grid__content">6</div>
+        </div>
+    </div>
+</div>
+
+
+<h3 id="automagic-widths">Automagic Widths</h3>
+<p>Fit any number to column in a given space. Works responsively so you can use &#39;span--fit--l&#39; for automagic widths at your large breakpoint and define how many columns to span at other sizes</p>
+<div class="example-grid">
+    <div class="grid">
+        <div class="span--1-1  span--1-3--m  span--fit--l">
+            <div class="example-grid__content">1</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--fit--l">
+            <div class="example-grid__content">2</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--fit--l">
+            <div class="example-grid__content">3</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--fit--l">
+            <div class="example-grid__content">4</div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--fit--l">
+            <div class="example-grid__content">5</div>
+        </div>
+    </div>
+</div>
+
+
+<h3 id="vertical-alignment">Vertical Alignment</h3>
+<h4 id="top">Top</h4>
+<div class="example-grid">
+    <div class="grid  grid--v-top">
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="center">Center</h4>
+<div class="example-grid">
+    <div class="grid  grid--v-center">
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content  example-grid__content--tall">1 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="bottom">Bottom</h4>
+<div class="example-grid">
+    <div class="grid  grid--v-bottom">
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content  example-grid__content--tall">2 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--v--center">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="stretch-default-behaviour-">Stretch (default behaviour)</h4>
+<p>If you want the inner element to be 100% of the grid item you must give it a display: flex; attribute, as in the example below.</p>
+<div class="example-grid">
+    <div class="grid  grid--v-stretch">
+        <div class="span--1-1  span--1-3--m  span--flex">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--flex">
+            <div class="example-grid__content">As this column gets taller the other columns within the grid will automagically grow with it!!! </div>
+        </div>
+        <div class="span--1-1  span--1-3--m  span--flex">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="justify-content">Justify Content</h3>
+<h4 id="justify-start">Justify Start</h4>
+<div class="example-grid">
+    <div class="grid  grid--align-start">
+        <div class="span--1-4">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">2 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="justify-end">Justify End</h4>
+<div class="example-grid">
+    <div class="grid  grid--align-end">
+        <div class="span--1-4">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">2 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="justify-center">Justify Center</h4>
+<div class="example-grid">
+    <div class="grid  grid--align-center">
+        <div class="span--1-4">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">2 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="justify-space-between">Justify space between</h4>
+<div class="example-grid">
+    <div class="grid  grid--align-space-between">
+        <div class="span--1-4">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">2 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="justify-space-around">Justify space around</h4>
+<div class="example-grid">
+    <div class="grid  grid--align-space-around">
+        <div class="span--1-4">
+            <div class="example-grid__content">1 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">2 </div>
+        </div>
+        <div class="span--1-4">
+            <div class="example-grid__content">3 </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="nested-grids">Nested Grids</h3>
+<p>You can nest grids as deep as you like with no inheritance issues.</p>
+<div class="example-grid">
+    <div class="grid">
+        <div class="span--1-1  span--1-2--l">
+            <div class="example-grid__content">
+                <div class="example-grid">
+                    <div class="grid">
+                        <div class="span--1-1  span--1-2--m">
+                            <div class="example-grid__content">
+                                nested
+                             </div>
+                        </div>
+                        <div class="span--1-1  span--1-2--m">
+                            <div class="example-grid__content">
+                                nested
+                             </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <div class="span--1-1  span--1-2--l">
+            <div class="example-grid__content">
+                <div class="example-grid">
+                    <div class="grid">
+                        <div class="span--1-1  span--1-2--m">
+                            <div class="example-grid__content">
+                                nested
+                             </div>
+                        </div>
+                        <div class="span--1-1  span--1-2--m">
+                            <div class="example-grid__content">
+                                nested
+                             </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+
+<h2 id="grid-settings">Grid Settings</h2>
+<p>Gridtacular takes a Sass map of arguments to setup and control the majority of the grid system. First you must instantiate the grid by calling the Gridtacular Mixin <code class="language-scss">@include gridtacular($grid_args);</code></p>
+<p>The following is example of the most basic requirements for setting up a grid. </p>
+<pre><code class="lang-scss">$grid_args:(
+    config: (
+        gridclass:           &#39;grid&#39;,
+        columnclass:         &#39;grid-item--&#39;,
+    ),
+    grids: (
+        small: (
+            columns: 6,
+            suffix: &#39;--s&#39;,
+            gutter: 1rem
+        ),
+        large: (
+            columns: 12,
+            suffix: &#39;--l&#39;,
+            gutter: 1rem
+        )
+    )
+);
+
+@include gridtacular($grid_args);
+</code></pre>
+<p>In the example you can see that we have created a variable <code class="language-scss">$grid_args</code> that contains a Sass map. We then create a <code class="language-scss">config</code>sub map and <code class="language-scss">grids</code> Sub map.</p>
+<p>Grids can contain an infinite number of grid definitions. For each grid that you add to this map Gridtacular will generate and output the required classes.</p>
+<p>Each of the grids contains a series of options. These options define the rules that govern the grids that are generated.</p>
+<h4 id="config-args">Config Args</h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Default</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gridclass</td>
+<td>string</td>
+<td>&quot;grid&quot;</td>
+<td>Set the grid class e.g. &#39;grid&#39;</td>
+</tr>
+<tr>
+<td>columnclass</td>
+<td>string</td>
+<td>&quot;grid&quot;</td>
+<td>Set the grid column class e.g. &#39;span--&#39; *change to itemclass</td>
+</tr>
+<tr>
+<td>push</td>
+<td>bool</td>
+<td>false</td>
+<td>Enable/disable push classes</td>
+</tr>
+<tr>
+<td>pushclass</td>
+<td>string</td>
+<td>&quot;push--&quot;</td>
+<td>Set the push class</td>
+</tr>
+<tr>
+<td>$default_omega</td>
+<td>bool</td>
+<td>true</td>
+<td>Enable/disable omega classes</td>
+</tr>
+<tr>
+<td>$debug</td>
+<td>bool</td>
+<td>false</td>
+<td>Enable the breakpoint debug tool </td>
+</tr>
+<tr>
+<td>$classdebug</td>
+<td>bool</td>
+<td>false</td>
+<td>Enable/disable the class debug tool</td>
+</tr>
+</tbody>
+</table>
+<p><em>may rename &#39;global&#39;</em></p>
+<h4 id="grids-args">Grids Args</h4>
+
+            </div>   
+        </div>
+    </div>
+</div>
+<script src="js/prism.js"></script>
+</body>
+</html>

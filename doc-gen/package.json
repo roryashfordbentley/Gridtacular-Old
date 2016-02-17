@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "watch:sass": "fsmonitor -q -d 'src/sass' -s '+*.scss' node-sass -q --output-style expanded src/sass/style.scss src/style.css",
-    "up": "livereload . -i 3000 & npm run -s watch:sass"
+    "sass-build":"npm run watch:sass && node index.js",
+    "watch": "livereload . -i 3000 & npm run -s sass-build"
   },
   "devDependencies": {
     "handlebars": "^4.0.5",

@@ -612,7 +612,6 @@ tr:nth-child(odd) td {
 td, th {
   background: #fff;
   padding: 0.5rem;
-  border: 1px solid #ccbdb3;
 }
 
 .site-header {

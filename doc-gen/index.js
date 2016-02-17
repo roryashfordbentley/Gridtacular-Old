@@ -7,7 +7,6 @@ var collections = require("metalsmith-collections");
 var permalinks  = require("metalsmith-permalinks");
 var drafts      = require("metalsmith-drafts");
 var define      = require("metalsmith-define");
-var concat      = require("metalsmith-concat");
 var ignore      = require("metalsmith-ignore");
 var headings    = require('metalsmith-headings');
 
@@ -32,12 +31,9 @@ Handlebars.registerPartial(
 
 Metalsmith(__dirname)
     .source("src")
-    .use(headings('h2'))
     .use(markdown())
-    .use(permalinks({
-        pattern: ':title'
-    }))
     .use(templates('handlebars'))
+    .use(headings('h2'))
     .use(ignore([
         '.DS_Store',
         'sass',
@@ -45,6 +41,9 @@ Metalsmith(__dirname)
         'js',
         'js/*'
     ]))
+    .use(permalinks({
+        pattern: ':title'
+    }))
     .destination('./build')
     .build(function(err) {
         if (err) console.log(err);

@@ -1,13 +1,23 @@
 {
-  "name": "Flexbones-Grid",
-  "version": "0.1.0",
-  "description": "Build everything using NPM",
-  "author": "Rory Ashford <rory@roikles.com>",
+  "name": "metalsmith",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "watch:sass": "fsmonitor -d 'sass' -s '+*.scss' node-sass --output-style expanded templates/sass/style.scss templates/style.css",
-    "up": "punch server"
+    "watch:sass": "fsmonitor -q -d 'src/sass' -s '+*.scss' node-sass -q --output-style expanded src/sass/style.scss src/style.css",
+    "up": "livereload . -i 3000 & npm run -s watch:sass"
   },
   "devDependencies": {
+    "handlebars": "^4.0.5",
+    "metalsmith": "^1.3.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-define": "^1.0.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-headings": "^0.1.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-templates": "^0.6.1",
+    "moment": "^2.9.0",
     "fsmonitor": "^0.2.4",
     "livereload": "^0.3.7",
     "node-sass": "^3.4.2"

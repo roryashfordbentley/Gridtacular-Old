@@ -1,6 +1,6 @@
 ---
-title: Index 
-strapline: Testing
+title: Gridtacular
+strapline: The modular, flexbox, responsive Sass grid system 
 template: page.hbt
 permalink: false
 ---

@@ -151,7 +151,6 @@
     }
 }
 
-
 ////
 // Control justification of the items
 // depends on rtl/ltr settings
@@ -328,7 +327,6 @@
 // tooltip appears with details on the applied classes
 // this may only be useful for the demo
 ////
-
 @mixin class-debug($grid_prefix){
     #{$grid_prefix} > *:hover::after{
         content: attr(class);
@@ -353,7 +351,6 @@
 @mixin gridtacular($grid_args){
      
     // Set variable defaults
-
     $default_grid_name: "grid";
     $default_item_name: "span--";
     $default_push: false;
@@ -367,6 +364,9 @@
     // otherwise fall back to the defined defaults
 
     // If grid class has been defined
+    $grid_name: null;
+    $grid_prefix: null;
+
     @if ( map-has-key(map-get($grid_args, config), gridclass) ) {
         $grid_name: map-get-z($grid_args, config, gridclass);
         $grid_prefix: #{'.' + map-get-z($grid_args, config, gridclass)};
@@ -376,6 +376,8 @@
     }
 
     // If item class has been defined
+    $item_name: null;
+
     @if ( map-has-key(map-get($grid_args, config), itemclass) ) {
         $item_name: map-get-z($grid_args, config, itemclass)
     } @else {
@@ -383,13 +385,17 @@
     }
 
     //If push has been defined
+    $push: null;
+
     @if (map-has-key(map-get($grid_args, config), push)) {
         $push: map-get-z($grid_args, config, push)
     } @else{
         $push: $default_push;
     }
 
-    // If pushclass has been defined    
+    // If pushclass has been defined 
+    $push_name: null;
+
     @if (map-has-key(map-get($grid_args, config), pushclass)) {
         $push_name: map-get-z($grid_args, config, pushclass);
     } @else{
@@ -397,6 +403,8 @@
     }
 
     // If omega has been defined
+    $omega: null;
+
     @if (map-has-key(map-get($grid_args, config), omega)) {
         $omega: map-get-z($grid_args, config, omega);
     } @else{
@@ -404,6 +412,8 @@
     }
 
     // If debug_display has been defined    
+    $debug_display: null;
+
     @if (map-has-key(map-get($grid_args, config), debug)) {
         $debug_display: map-get-z($grid_args, config, debug);
     } @else{
@@ -411,6 +421,8 @@
     }
 
     // If debug_display has been defined
+    $class_debug_display: null;
+
     @if (map-has-key(map-get($grid_args, config), classdebug)) {
         $class_debug_display: map-get-z($grid_args, config, classdebug);
     } @else{

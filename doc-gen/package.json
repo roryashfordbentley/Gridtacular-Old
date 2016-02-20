@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "watch:sass": "fsmonitor -q -d 'src/sass' -s '+*.scss' node-sass -q --output-style expanded src/sass/style.scss src/style.css",
-    "watch": "livereload . -e 'sass js html md hbt' & npm run -s watch-sass & fsmonitor -q -d 'src' node index.js"
+    "sass": "fsmonitor -d 'src/sass' -s '+*.scss' node-sass --output-style expanded src/sass/style.scss src/style.css",
+    "build": "fsmonitor -d 'src' node index.js",
+    "watch": "livereload & npm run sass & npm run build"
   },
   "devDependencies": {
     "handlebars": "^4.0.5",
@@ -19,7 +20,7 @@
     "metalsmith-templates": "^0.6.1",
     "moment": "^2.9.0",
     "fsmonitor": "^0.2.4",
-    "livereload": "^0.4.0",
+    "livereload": "0.4.0",
     "node-sass": "^3.4.2"
   }
 }

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
 <head>
 <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <header class="site-header">
     <div class="site-header__content">
         <h1 class="site-header__title">Gridtacular</h1>
-        <p>The Modular, Responsive Flexbox Grid System</p>
+        <p>The modular, flexbox, responsive Sass grid system</p>
         <section class="site-header__downloads">
             <div class="grid  grid--align-center">
                 <div class="span--1-2">
@@ -26,28 +26,80 @@
             </div>
         </section>
     </div>
+    <div class="eighties-grid">
+        <div class="grid">
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;asdf
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="span-1-12">
+                <div class="eighties-grid__item">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+
 </header>
 <div class="grid">
     <div class="span--1-1  span--3-12--m  span--flex">
         
-<aside class="sidebar">
-    <nav class="sidebar-nav">
-            <h2 class="sidebar-nav__title">Introduction</h2>
-            <ul class="nav-list">
-                    <li class="nav-list__item"><a href="#gridtacular-what-is-it-">What is it?</a></li>    
-                    <li class="nav-list__item"><a href="#grid-setup">Grid Setup</a></li>    
-                    <li class="nav-list__item"><a href="#markup">Markup</a></li>    
-            </ul>
-            <h2 class="sidebar-nav__title">Examples</h2>
-            <ul class="nav-list">
-                    <li class="nav-list__item"><a href="#basic-grid-example">Basic Grid Example</a></li>    
-                    <li class="nav-list__item"><a href="#automagic-widths">Automagic Widths</a></li>    
-                    <li class="nav-list__item"><a href="#vertical-alignment">Vertical Alignment</a></li>    
-                    <li class="nav-list__item"><a href="#justify-content">Justify Content</a></li>    
-                    <li class="nav-list__item"><a href="#nested-grids">Nested Grids</a></li>    
-            </ul>
-    </nav>
-</aside>
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                
+            </nav>
+        </aside>
     </div>
     <div class="span--1-1  span--fit--m">
     
@@ -105,7 +157,10 @@
         </div>
     </div>
 </div>
-                <h2 id="examples">Examples</h2>
+
+
+
+<h2 id="examples">Examples</h2>
 <h3 id="basic-grid-example">Basic Grid Example</h3>
 <p>This grid is 6 columns at Large, 3 columns at Medium and 1 columns at small sizes</p>
 <div class="example-grid">
@@ -335,7 +390,10 @@
         </div>
     </div>
 </div>
-                <h2 id="grid-settings">Grid Settings</h2>
+
+
+
+<h2 id="grid-settings">Grid Settings</h2>
 <p>Gridtacular takes a Sass map of arguments to setup and control the majority of the grid system. First you must instantiate the grid by calling the Gridtacular Mixin <code class="language-scss">@include gridtacular($grid_args);</code></p>
 <p>The following is example of the most basic requirements for setting up a grid. </p>
 <pre><code class="lang-scss">$grid_args:(

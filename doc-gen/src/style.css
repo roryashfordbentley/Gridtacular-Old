@@ -966,3 +966,8 @@ pre > code.highlight {
   outline: 0.4em solid #dc322f;
   outline-offset: .4em;
 }
+
+.eighties-grid__item {
+  height: 10rem;
+  border-left: 0.15 solid #fff;
+}

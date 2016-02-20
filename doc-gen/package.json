@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "sass": "fsmonitor -d 'src/sass' -s '+*.scss' node-sass --output-style expanded src/sass/style.scss src/style.css",
-    "build": "fsmonitor -d 'src' node index.js",
+    "build": "fsmonitor node index.js",
     "watch": "livereload & npm run sass & npm run build"
   },
   "devDependencies": {

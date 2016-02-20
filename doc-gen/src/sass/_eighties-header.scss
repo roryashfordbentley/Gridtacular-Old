@@ -1,6 +1,45 @@
-.eighties-grid{}
+$grid-width: 2px;
+
+.eighties-grid-wrapper{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	height: 30rem;
+	background: #000;
+	overflow: hidden;
+	background-image: linear-gradient(to bottom,#005399,#6E0B8A);
+	background-repeat: no-repeat;
+	&:before{
+		content: "";
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(rgba(#000,0.5),rgba(#000,0));	
+	}
+}
+
+.eighties-grid{
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	top: 0rem;
+	left: -40rem;
+	bottom: 0;
+	right: -40rem;
+	transform: perspective(26rem) rotateX(70deg);
+	background-image: linear-gradient(rgba(#fff,0.5) $grid-width, transparent $grid-width);
+	background-size: 6% 6%, 6% 6%;
+}
 
     .eighties-grid__item{
-        height: 10rem;
-        border-left: 0.15 solid #fff;
+        -webkit-backface-visibility: hidden;
+        height: 50rem;
+        border-left: $grid-width solid rgba(#fff,0.3);
+        border-right: $grid-width solid rgba(#fff,0.3);
+        outline: 1px solid transparent;
     }

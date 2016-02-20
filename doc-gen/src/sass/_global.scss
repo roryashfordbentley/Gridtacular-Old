@@ -3,11 +3,10 @@
 // Vars
 
 // Colours
-$yellow: #008aff;
 $grey: #ccc;
-$navy: #323947;
+$navy: #005399;
 $text: #545454;
-$primary: $yellow;
+$primary: #008aff;
 
 *{
     margin: 0;
@@ -33,7 +32,7 @@ html{
 
     .btn,
     .btn:visited{
-        display: block;
+        display: inline-block;
         background-color: $primary;
         padding: 0.8rem 0rem;
         width: 100%;

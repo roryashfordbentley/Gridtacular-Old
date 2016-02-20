@@ -22,7 +22,7 @@ html {
 
 .btn,
 .btn:visited {
-  display: block;
+  display: inline-block;
   background-color: #008aff;
   padding: 0.8rem 0rem;
   width: 100%;
@@ -615,7 +615,6 @@ td, th {
 }
 
 .site-header {
-  background: #005399;
   color: #fff;
   width: 100%;
   padding: 0.5rem 1rem;
@@ -626,12 +625,30 @@ td, th {
   align-items: center;
 }
 
-.site-header__content {
-  max-width: 30rem;
+.site-header__downloads {
+  margin: 0 auto;
 }
 
 .site-header__title {
   margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1;
+  text-shadow: 5px 5px 10px #008aff;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+  .site-header__title {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .site-header__title {
+    font-size: 8rem;
+  }
 }
 
 .downloads {
@@ -639,7 +656,7 @@ td, th {
 }
 
 .downloads__btn {
-  width: 100%;
+  width: 10rem;
 }
 
 .sidebar {
@@ -967,7 +984,47 @@ pre > code.highlight {
   outline-offset: .4em;
 }
 
+.eighties-grid-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 30rem;
+  background: #000;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #005399, #6E0B8A);
+  background-repeat: no-repeat;
+}
+
+.eighties-grid-wrapper:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+}
+
+.eighties-grid {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  top: 0rem;
+  left: -40rem;
+  bottom: 0;
+  right: -40rem;
+  transform: perspective(26rem) rotateX(70deg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+  background-size: 6% 6%, 6% 6%;
+}
+
 .eighties-grid__item {
-  height: 10rem;
-  border-left: 0.15 solid #fff;
+  -webkit-backface-visibility: hidden;
+  height: 50rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  outline: 1px solid transparent;
 }

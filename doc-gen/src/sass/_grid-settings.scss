@@ -1,10 +1,10 @@
 $grid_args:(
     config: (
-        gridclass:           'grid',
-        columnclass:         'span--',
-        pushclass:           'push--',
+        grid_class:          'grid',
+        item_class:          'span--',
+        push_class:          'push--',
         debug:               true,
-        classdebug:          false
+        class_debug:         false
     ),
     grids: (
         small: (

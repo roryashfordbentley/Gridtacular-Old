@@ -15,7 +15,7 @@
 <header class="site-header">
     <div class="site-header__content">
         <h1 class="site-header__title">{{title}}</h1>
-        <p>{{strapline}}</p>
+        <!--<p>{{strapline}}</p>-->
         <section class="site-header__downloads">
             <a href="https://github.com/roikles/Flexbones-Grid/archive/master.zip" class="btn  downloads__btn">Download</a>
                 
@@ -170,8 +170,11 @@
                         &nbsp;
                     </div>
                 </div>
-                
-                
+                <div class="span--fit">
+                    <div class="eighties-grid__item">
+                        &nbsp;
+                    </div>
+                </div>
             </div>
         </div>
     </div>

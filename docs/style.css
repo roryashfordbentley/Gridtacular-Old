@@ -126,62 +126,50 @@ body:after {
 
 .span--1-12 {
   flex-basis: 8.33333%;
-  max-width: 8.33333%;
 }
 
 .span--1-6, .span--2-12 {
   flex-basis: 16.66667%;
-  max-width: 16.66667%;
 }
 
 .span--1-4, .span--3-12 {
   flex-basis: 25%;
-  max-width: 25%;
 }
 
 .span--1-3, .span--2-6, .span--4-12 {
   flex-basis: 33.33333%;
-  max-width: 33.33333%;
 }
 
 .span--5-12 {
   flex-basis: 41.66667%;
-  max-width: 41.66667%;
 }
 
 .span--1-2, .span--2-4, .span--3-6, .span--6-12 {
   flex-basis: 50%;
-  max-width: 50%;
 }
 
 .span--7-12 {
   flex-basis: 58.33333%;
-  max-width: 58.33333%;
 }
 
 .span--2-3, .span--4-6, .span--8-12 {
   flex-basis: 66.66667%;
-  max-width: 66.66667%;
 }
 
 .span--3-4, .span--9-12 {
   flex-basis: 75%;
-  max-width: 75%;
 }
 
 .span--5-6, .span--10-12 {
   flex-basis: 83.33333%;
-  max-width: 83.33333%;
 }
 
 .span--11-12 {
   flex-basis: 91.66667%;
-  max-width: 91.66667%;
 }
 
 .span--1-1, .span--2-2, .span--3-3, .span--4-4, .span--6-6, .span--12-12 {
   flex-basis: 100%;
-  max-width: 100%;
 }
 
 .span--omega {
@@ -251,51 +239,39 @@ body:after {
   }
   .span--1-12--m {
     flex-basis: 8.33333%;
-    max-width: 8.33333%;
   }
   .span--1-6--m, .span--2-12--m {
     flex-basis: 16.66667%;
-    max-width: 16.66667%;
   }
   .span--1-4--m, .span--3-12--m {
     flex-basis: 25%;
-    max-width: 25%;
   }
   .span--1-3--m, .span--2-6--m, .span--4-12--m {
     flex-basis: 33.33333%;
-    max-width: 33.33333%;
   }
   .span--5-12--m {
     flex-basis: 41.66667%;
-    max-width: 41.66667%;
   }
   .span--1-2--m, .span--2-4--m, .span--3-6--m, .span--6-12--m {
     flex-basis: 50%;
-    max-width: 50%;
   }
   .span--7-12--m {
     flex-basis: 58.33333%;
-    max-width: 58.33333%;
   }
   .span--2-3--m, .span--4-6--m, .span--8-12--m {
     flex-basis: 66.66667%;
-    max-width: 66.66667%;
   }
   .span--3-4--m, .span--9-12--m {
     flex-basis: 75%;
-    max-width: 75%;
   }
   .span--5-6--m, .span--10-12--m {
     flex-basis: 83.33333%;
-    max-width: 83.33333%;
   }
   .span--11-12--m {
     flex-basis: 91.66667%;
-    max-width: 91.66667%;
   }
   .span--1-1--m, .span--2-2--m, .span--3-3--m, .span--4-4--m, .span--6-6--m, .span--12-12--m {
     flex-basis: 100%;
-    max-width: 100%;
   }
   .span--omega--m {
     margin-left: auto;
@@ -364,51 +340,39 @@ body:after {
   }
   .span--1-12--l {
     flex-basis: 8.33333%;
-    max-width: 8.33333%;
   }
   .span--1-6--l, .span--2-12--l {
     flex-basis: 16.66667%;
-    max-width: 16.66667%;
   }
   .span--1-4--l, .span--3-12--l {
     flex-basis: 25%;
-    max-width: 25%;
   }
   .span--1-3--l, .span--2-6--l, .span--4-12--l {
     flex-basis: 33.33333%;
-    max-width: 33.33333%;
   }
   .span--5-12--l {
     flex-basis: 41.66667%;
-    max-width: 41.66667%;
   }
   .span--1-2--l, .span--2-4--l, .span--3-6--l, .span--6-12--l {
     flex-basis: 50%;
-    max-width: 50%;
   }
   .span--7-12--l {
     flex-basis: 58.33333%;
-    max-width: 58.33333%;
   }
   .span--2-3--l, .span--4-6--l, .span--8-12--l {
     flex-basis: 66.66667%;
-    max-width: 66.66667%;
   }
   .span--3-4--l, .span--9-12--l {
     flex-basis: 75%;
-    max-width: 75%;
   }
   .span--5-6--l, .span--10-12--l {
     flex-basis: 83.33333%;
-    max-width: 83.33333%;
   }
   .span--11-12--l {
     flex-basis: 91.66667%;
-    max-width: 91.66667%;
   }
   .span--1-1--l, .span--2-2--l, .span--3-3--l, .span--4-4--l, .span--6-6--l, .span--12-12--l {
     flex-basis: 100%;
-    max-width: 100%;
   }
   .span--omega--l {
     margin-left: auto;
@@ -477,51 +441,39 @@ body:after {
   }
   .span--1-12--xl {
     flex-basis: 8.33333%;
-    max-width: 8.33333%;
   }
   .span--1-6--xl, .span--2-12--xl {
     flex-basis: 16.66667%;
-    max-width: 16.66667%;
   }
   .span--1-4--xl, .span--3-12--xl {
     flex-basis: 25%;
-    max-width: 25%;
   }
   .span--1-3--xl, .span--2-6--xl, .span--4-12--xl {
     flex-basis: 33.33333%;
-    max-width: 33.33333%;
   }
   .span--5-12--xl {
     flex-basis: 41.66667%;
-    max-width: 41.66667%;
   }
   .span--1-2--xl, .span--2-4--xl, .span--3-6--xl, .span--6-12--xl {
     flex-basis: 50%;
-    max-width: 50%;
   }
   .span--7-12--xl {
     flex-basis: 58.33333%;
-    max-width: 58.33333%;
   }
   .span--2-3--xl, .span--4-6--xl, .span--8-12--xl {
     flex-basis: 66.66667%;
-    max-width: 66.66667%;
   }
   .span--3-4--xl, .span--9-12--xl {
     flex-basis: 75%;
-    max-width: 75%;
   }
   .span--5-6--xl, .span--10-12--xl {
     flex-basis: 83.33333%;
-    max-width: 83.33333%;
   }
   .span--11-12--xl {
     flex-basis: 91.66667%;
-    max-width: 91.66667%;
   }
   .span--1-1--xl, .span--2-2--xl, .span--3-3--xl, .span--4-4--xl, .span--6-6--xl, .span--12-12--xl {
     flex-basis: 100%;
-    max-width: 100%;
   }
   .span--omega--xl {
     margin-left: auto;
@@ -635,7 +587,6 @@ td, th {
   text-transform: uppercase;
   font-size: 4rem;
   line-height: 1;
-  text-shadow: 5px 5px 10px #008aff;
   margin-bottom: 3rem;
 }
 
@@ -657,6 +608,7 @@ td, th {
 
 .downloads__btn {
   width: 10rem;
+  margin: 0 0.5rem;
 }
 
 .sidebar {
@@ -985,6 +937,7 @@ pre > code.highlight {
 }
 
 .eighties-grid-wrapper {
+  pointer-events: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -992,21 +945,19 @@ pre > code.highlight {
   left: 0;
   z-index: -1;
   height: 30rem;
-  background: #000;
+  background: #023A69;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, #005399, #6E0B8A);
-  background-repeat: no-repeat;
 }
 
 .eighties-grid-wrapper:before {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: -10;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(7, 36, 61, 0.95), rgba(0, 138, 255, 0.6));
 }
 
 .eighties-grid {
@@ -1017,14 +968,23 @@ pre > code.highlight {
   bottom: 0;
   right: -40rem;
   transform: perspective(26rem) rotateX(70deg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 2px, transparent 2px);
-  background-size: 6% 6%, 6% 6%;
 }
 
 .eighties-grid__item {
   -webkit-backface-visibility: hidden;
   height: 50rem;
-  border-left: 2px solid rgba(255, 255, 255, 0.3);
-  border-right: 2px solid rgba(255, 255, 255, 0.3);
-  outline: 1px solid transparent;
+  border-left: 1px dashed rgba(255, 255, 255, 0.6);
+  border-right: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
+@-webkit-keyframes colorPulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }

@@ -591,13 +591,17 @@ td, th {
 }
 
 .logo {
-  width: 50rem;
+  width: 100%;
+  max-width: 40rem;
   margin-bottom: 2rem;
   overflow: visible;
 }
 
 .logo__text {
   fill: #fff;
+  animation-name: fadein;
+  animation-timing-function: ease;
+  animation-duration: 1s;
 }
 
 .logo__triangle {
@@ -734,6 +738,18 @@ td, th {
   }
   100% {
     transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -1097,9 +1113,14 @@ pre > code.highlight {
   transform: perspective(26rem) rotateX(70deg);
 }
 
+.eighties-grid-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .eighties-grid__item {
   -webkit-backface-visibility: hidden;
   height: 50rem;
-  border-left: 1px dashed rgba(255, 255, 255, 0.6);
-  border-right: 1px dashed rgba(255, 255, 255, 0.6);
+  border-left: 1px dashed rgba(255, 255, 255, 0.8);
+  border-right: 1px dashed rgba(255, 255, 255, 0.8);
 }

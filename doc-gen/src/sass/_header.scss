@@ -1,5 +1,4 @@
 .site-header{
-	//background: mix(#000,$primary,40%);
 	color: #fff;
 	width: 100%;
 	padding: 0.5rem 1rem;
@@ -14,24 +13,6 @@
 		margin: 0 auto;
 	}
 
-	.site-header__title{
-		margin: 0;
-		font-family: 'Roboto Condensed', sans-serif;
-		text-transform: uppercase;
-		font-size: 4rem;
-		line-height: 1;
-		//text-shadow: 5px 5px 10px rgba($primary, 1);
-		margin-bottom: 3rem;
-		@include at-breakpoint(800px){
-			font-size: 7rem;
-		}
-
-		@include at-breakpoint(1100px){
-			font-size: 8rem;
-		}
-
-	}
-
 	.downloads{
 		width: 100%;
 	}
@@ -41,5 +22,26 @@
 			margin: 0 0.5rem;
 		}
 
-		.downloads__btn--github{
-		}
+		.downloads__btn--github{}
+	       
+
+.logo{
+	width: 50rem;
+	margin-bottom: 2rem;
+}
+
+	.logo__text{
+		fill: #fff;
+	}
+
+	.logo__triangle-left path{
+		fill: $primary;
+	}
+
+	.logo__triangle-right path{
+		fill: mix($primary,#fff,70%);
+	}
+
+	.logo__triangle-bottom path{
+		fill: mix($primary,#000,70%);
+	}

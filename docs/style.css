@@ -581,27 +581,6 @@ td, th {
   margin: 0 auto;
 }
 
-.site-header__title {
-  margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase;
-  font-size: 4rem;
-  line-height: 1;
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 800px) {
-  .site-header__title {
-    font-size: 7rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .site-header__title {
-    font-size: 8rem;
-  }
-}
-
 .downloads {
   width: 100%;
 }
@@ -609,6 +588,27 @@ td, th {
 .downloads__btn {
   width: 10rem;
   margin: 0 0.5rem;
+}
+
+.logo {
+  width: 50rem;
+  margin-bottom: 2rem;
+}
+
+.logo__text {
+  fill: #fff;
+}
+
+.logo__triangle-left path {
+  fill: #008aff;
+}
+
+.logo__triangle-right path {
+  fill: #4dadff;
+}
+
+.logo__triangle-bottom path {
+  fill: #0061b3;
 }
 
 .sidebar {
@@ -952,18 +952,18 @@ pre > code.highlight {
 .eighties-grid-wrapper:before {
   content: "";
   position: absolute;
-  z-index: -10;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, rgba(7, 36, 61, 0.95), rgba(0, 138, 255, 0.6));
+  background-image: linear-gradient(to bottom, rgba(30, 39, 45, 0.9), rgba(38, 57, 68, 0.6));
 }
 
 .eighties-grid {
   position: absolute;
   -webkit-backface-visibility: hidden;
-  top: 0rem;
+  top: -20rem;
   left: -40rem;
   bottom: 0;
   right: -40rem;

@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-    <div class="site-header__content">
+    <div class="wrapper">
         <div class="site-header__logo">
             
             <?xml version="1.0" encoding="utf-8"?>
@@ -75,163 +75,75 @@
 
         </div>
         <!--<p>{{strapline}}</p>-->
-        <section class="site-header__downloads">
+        <!--<section class="site-header__downloads">
             <a href="https://github.com/roikles/Flexbones-Grid/archive/master.zip" class="btn  downloads__btn">Download</a>
                 
             <a href="https://github.com/roikles/Flexbones-Grid" class="btn  downloads__btn  downloads__btn--github">Github</a>    
-        </section>
+        </section>-->
     </div>
     <div class="eighties-grid-wrapper">
         <div class="eighties-grid">
-            <div class="grid">
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+            <div class="eighties-grid-inner">
+                <div class="grid  grid--center">
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="span--fit">
-                    <div class="eighties-grid__item">
-                        &nbsp;
+                    <div class="span--fit">
+                        <div class="eighties-grid__item">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
             </div>

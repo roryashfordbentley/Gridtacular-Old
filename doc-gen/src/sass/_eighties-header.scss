@@ -37,9 +37,14 @@ $grid-width: 1px;
 	//background-size: 6% 6%, 1% 6%;
 }
 
+	.eighties-grid-inner{
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
     .eighties-grid__item{
         -webkit-backface-visibility: hidden;
         height: 50rem;
-        border-left: $grid-width dashed rgba(#fff,0.6);
-        border-right: $grid-width dashed rgba(#fff,0.6);
+        border-left: $grid-width dashed rgba(#fff,0.8);
+        border-right: $grid-width dashed rgba(#fff,0.8);
     }

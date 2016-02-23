@@ -1,3 +1,5 @@
+//@import "vendor/prism-theme.scss";
+//@import "_prism";
 @import "_global";
 @import "../../../src/sass/_gridtacular";
 @import "_grid-settings";
@@ -5,8 +7,7 @@
 @import "_tables";
 @import "_animations";
 @import "_header";
+@import "_logo";
 @import "_sidebar";
 @import "_content";
-@import "_prism";
-@import "_prism-solarized-theme";
-@import "_eighties-header";
+

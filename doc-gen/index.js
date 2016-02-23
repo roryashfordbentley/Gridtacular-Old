@@ -57,9 +57,7 @@ Metalsmith(__dirname)
     .use(ignore([
         '.DS_Store',
         'sass',
-        'sass/*',
-        'js',
-        'js/*'
+        'sass/*'
     ]))
     .use(permalinks({
         pattern: ':title'

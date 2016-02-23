@@ -49,12 +49,12 @@ Grid containers by default have a class of <code class="language-scss">.grid</co
 The following is a simple example ofa responsve grid that has a single item per row at the smallest breakpoint, 2 items per row at the medium breakpoint and 4 items per row at the large breakpoint.
 
 ```html
-<div class="grid">
-    <div class="span--1-1  span--1-2--m  span--1-4--l">1</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">2</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">3</div>
-    <div class="span--1-1  span--1-2--m  span--1-4--l">4</div>
-</div>
+    <div class="grid">
+        <div class="span--1-1  span--1-2--m  span--1-4--l">1</div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">2</div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">3</div>
+        <div class="span--1-1  span--1-2--m  span--1-4--l">4</div>
+    </div>
 ```
 which produces a grid like so:
 

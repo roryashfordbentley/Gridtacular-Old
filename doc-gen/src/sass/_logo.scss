@@ -1,0 +1,54 @@
+// Logo
+
+.logo{
+	width: 100%;
+	max-width: 50rem;
+	margin-bottom: 2rem;
+	overflow: visible;
+}
+
+	.logo__text{
+		fill: #fff;
+		animation-name: fade-in;
+		animation-timing-function: ease;
+		animation-duration: 3s;
+	}
+
+	.logo__triangle{
+		animation-name: animate-logo-rotate;
+		animation-duration: 1.7s;
+		transform-origin: center center;
+	}
+
+	.logo__triangle__left path{
+		fill: $primary;
+		animation-name: animate-logo-left;
+		animation-timing-function: ease;
+		@for $i from 1 through 6{
+			&:nth-child(#{$i}){
+				animation-duration: 0.5 + $i*0.3s;
+			}
+		}
+	}
+
+	.logo__triangle__right path{
+		fill: mix($primary,#fff,70%);
+		animation-name: animate-logo-right;
+		animation-timing-function: ease;
+		@for $i from 1 through 6{
+			&:nth-child(#{$i}){
+				animation-duration: 0.5 + $i*0.3s;
+			}
+		}
+	}
+
+	.logo__triangle__bottom path{
+		fill: mix($primary,#000,70%);
+		animation-name: animate-logo-bottom;
+		animation-timing-function: ease;
+		@for $i from 1 through 6{
+			&:nth-child(#{$i}){
+				animation-duration: 0.5 + $i*0.3s;
+			}
+		}
+	}

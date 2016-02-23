@@ -1,10 +1,5 @@
 // Animations
 
-@keyframes scrolling-bg {
-  from { background-position: 0 0; }
-  to   { background-position: 60px 2px; }
-}
-
 // animate logo
 @keyframes animate-logo-rotate {
     0% {
@@ -52,7 +47,7 @@
     0% {
         opacity: 0;
     }
-    50% {
+    25% {
         opacity: 0;
     }
     100% {

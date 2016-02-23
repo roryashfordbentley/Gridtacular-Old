@@ -13,6 +13,11 @@
 <body>
 
 <header class="site-header">
+    <div class="perspective">
+        <div class="perspective__scrolling-grid">
+         &nbsp;
+        </div>
+    </div>
     <div class="wrapper">
         <div class="site-header__logo">
             
@@ -80,10 +85,5 @@
                 
             <a href="https://github.com/roikles/Flexbones-Grid" class="btn  downloads__btn  downloads__btn--github">Github</a>    
         </section>-->
-    </div>
-    <div class="perspective">
-        <div class="perspective__scrolling-grid">
-         &nbsp;
-        </div>
     </div>
 </header>

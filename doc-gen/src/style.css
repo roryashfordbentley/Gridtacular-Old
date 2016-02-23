@@ -566,6 +566,69 @@ td, th {
   padding: 0.5rem;
 }
 
+@keyframes scrolling-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 2px;
+  }
+}
+
+@keyframes animate-logo-rotate {
+  0% {
+    transform: rotate(280deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-logo-right {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-logo-left {
+  0% {
+    transform: translate(-50px, 25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-logo-bottom {
+  0% {
+    transform: translate(50px, 25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .site-header {
   color: #fff;
   width: 100%;
@@ -599,20 +662,20 @@ td, th {
 
 .logo__text {
   fill: #fff;
-  animation-name: fadein;
+  animation-name: fade-in;
   animation-timing-function: ease;
   animation-duration: 1s;
 }
 
 .logo__triangle {
-  animation-name: animaterotate;
+  animation-name: animate-logo-rotate;
   animation-duration: 1.7s;
   transform-origin: center center;
 }
 
 .logo__triangle__left path {
   fill: #008aff;
-  animation-name: animateleft;
+  animation-name: animate-logo-left;
   animation-timing-function: ease;
 }
 
@@ -642,7 +705,7 @@ td, th {
 
 .logo__triangle__right path {
   fill: #4dadff;
-  animation-name: animateright;
+  animation-name: animate-logo-right;
   animation-timing-function: ease;
 }
 
@@ -672,7 +735,7 @@ td, th {
 
 .logo__triangle__bottom path {
   fill: #0061b3;
-  animation-name: animatebottom;
+  animation-name: animate-logo-bottom;
   animation-timing-function: ease;
 }
 
@@ -700,58 +763,33 @@ td, th {
   animation-duration: 2s;
 }
 
-@keyframes animaterotate {
-  0% {
-    transform: rotate(280deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.perspective {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  top: -20rem;
+  left: -20rem;
+  bottom: 0;
+  right: -20rem;
+  transform: perspective(26rem) rotateX(70deg);
 }
 
-@keyframes animateright {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.perspective:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba(30, 39, 45, 0.9), rgba(38, 57, 68, 0.6));
 }
 
-@keyframes animateleft {
-  0% {
-    transform: translate(-50px, 25px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes animatebottom {
-  0% {
-    transform: translate(50px, 25px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.perspective__scrolling-grid {
+  margin-top: 50px;
+  height: 600px;
+  background: linear-gradient(to right, transparent 0%, transparent 3%, #223049 3%, #223049 80%, transparent 80%, transparent 84%, #223049 84%, #223049 100%), linear-gradient(to bottom, #00ffba, #007cff);
+  background-size: 60px 2px,100%;
+  animation: scrolling-bg 2.5s linear infinite;
 }
 
 .sidebar {

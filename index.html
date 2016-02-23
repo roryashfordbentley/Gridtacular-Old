@@ -13,6 +13,11 @@
 <body>
 
 <header class="site-header">
+    <div class="perspective">
+        <div class="perspective__scrolling-grid">
+         &nbsp;
+        </div>
+    </div>
     <div class="wrapper">
         <div class="site-header__logo">
             
@@ -81,11 +86,6 @@
             <a href="https://github.com/roikles/Flexbones-Grid" class="btn  downloads__btn  downloads__btn--github">Github</a>    
         </section>-->
     </div>
-    <div class="perspective">
-        <div class="perspective__scrolling-grid">
-         &nbsp;
-        </div>
-    </div>
 </header>
 
 <div class="grid">
@@ -129,12 +129,12 @@
 <p>The grid comes with some default classes for the grid container and for grid items but this is completely customisable to fit in with your current naming conventions.</p>
 <p>Grid containers by default have a class of <code class="language-scss">.grid</code>. Grid items have a class structure <code class="language-scss">.grid[no of columns to span]-[total columns][breakpoint]</code>. </p>
 <p>The following is a simple example ofa responsve grid that has a single item per row at the smallest breakpoint, 2 items per row at the medium breakpoint and 4 items per row at the large breakpoint.</p>
-<pre><code class="lang-html">&lt;div class=&quot;grid&quot;&gt;
-    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;1&lt;/div&gt;
-    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;2&lt;/div&gt;
-    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;3&lt;/div&gt;
-    &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;4&lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="lang-html">    &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;span--1-1  span--1-2--m  span--1-4--l&quot;&gt;4&lt;/div&gt;
+    &lt;/div&gt;
 </code></pre>
 <p>which produces a grid like so:</p>
 <div class="example-grid">

@@ -1,5 +1,67 @@
 {{> header}}
 
+<section class="examples">
+
+    <div class="wrapper">
+        <h1 class="example__title">Real World Examples</h1>
+        <section class="example">
+            <div class="grid  grid--v-bottom">
+                <div class="span--1-1  span--2-3--m">
+                    <h2 class="example__title">Media Object</h2>
+                </div>
+                <div class="span--1-1  span--1-3--m">
+                
+                    <menu class="example__tabs">
+                        <div class="example__tab  example__tab--active">
+                            <a href="#">result</a>
+                        </div>
+                        <div class="example__tab">
+                            <a href="#">.scss</a>
+                        </div>
+                        <div class="example__tab">
+                            <a href="#">html</a>
+                        </div>
+                    </menu> 
+                
+                </div>
+                <div class="span--fit">
+
+                    <section class="example__content">
+                    <div class="grid">
+                        <div class="span">
+                            <img src="http://unsplash.it/100/100?image=450">
+                        </div>
+                        <div class="span--fit">
+                            <p>Over his ivory-inlaid table, Ahab presided like a mute, maned sea-lion on the white coral beach, surrounded by his warlike but still deferential cubs. In his own proper turn, each officer waited to be served.</p>
+
+                            <div class="grid">
+                                <div class="span">
+                                    <img class="media-object__img" src="http://unsplash.it/60/60?image=450">
+                                </div>
+                                <div class="span--fit">
+                                    <p>Over his ivory-inlaid table, Ahab presided like a mute, maned sea-lion on the white coral beach, surrounded by his warlike but still deferential cubs. In his own proper turn, each officer waited to be served.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid">
+                                <div class="span">
+                                    <img class="media-object__img" src="http://unsplash.it/60/60?image=450">
+                                </div>
+                                <div class="span--fit">
+                                    <p>Over his ivory-inlaid table, Ahab presided like a mute, maned sea-lion on the white coral beach, surrounded by his warlike but still deferential cubs. In his own proper turn, each officer waited to be served.</p>
+                                </div>
+                            </div>    
+                        </div>
+
+                    </section>
+                
+                </div>
+            </div>
+        </section>
+    </div>
+
+</section>
+
 <div class="grid">
     <div class="span--1-1  span--3-12--m  span--flex">
         

@@ -5,11 +5,22 @@ template: page.hbt
 permalink: false
 ---
 
+## To Do
+
+* Finish documentation
+* Add real world examples
+* * Media Object
+* * Image gallery
+* * Equal height columns
+* * Navigation pattern
+* * Vertical and Horizontal centering
+* Create additional pages for the documentation
+
 ## Introduction
 
 ### Gridtacular, What is it?
 
-Gridtacular is a modular flexbox powered responsive grid system. I has been designed to adapt to your workflow and naming conventions.
+Gridtacular is a modular flexbox powered responsive grid system. It has been designed to adapt to your workflow and naming conventions.
 
 The grid system is customisable via a Sass map which allows you to customise the grid to your requirements in a similar way to many popular javascript libraries.
 

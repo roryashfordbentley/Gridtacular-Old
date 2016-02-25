@@ -28,9 +28,10 @@ p{
     margin-bottom: 2rem;
 }
 
-    p:last-child{
-        margin-bottom: 0;  
-    }
+ul{
+    margin: 0 0 2rem 2rem;
+
+}
 
 a,a:visited{
     color: $primary;

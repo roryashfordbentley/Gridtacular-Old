@@ -1,0 +1,72 @@
+// Examples
+
+.examples{
+	display: flex;
+ 	background-image: linear-gradient(160deg,#223049 10%,#007cff 100%);
+ 	align-items: center;
+ 	justify-content: center;
+ 	padding: 4rem 0;
+ 	h1{
+ 		text-align: center;
+ 		font-weight: 300;
+ 		margin-bottom: 4rem;
+ 	}
+}
+
+.example{
+}
+
+	.example__title{
+		color: #fff;
+		margin-bottom: 1rem;
+	}
+
+	.example__tabs{
+		display: flex;
+		margin-bottom: 1rem;
+		@include at-breakpoint(800px){
+			justify-content: flex-end;
+		}
+	}
+
+	.example__tab{
+		display: inline-block;
+	}
+		
+		.example__tab a{
+			font-size: 0.8rem;
+			font-weight: 300;
+			color: mix(#223049,#fff,30%);
+			width: 5rem;
+			background: rgba(#000,0.2);
+			border-radius: 1rem;
+			padding: 0.1rem 1rem 0.2rem 1rem;
+			text-align: center;
+			box-shadow: inset 0 0 0.5rem rgba(#000,0.25);
+			margin: 0 0.25rem;
+			
+			&:hover{
+				color: #fff;
+			}
+		}
+
+			.example__tab--active a{
+				font-weight: 400;
+				background-image: linear-gradient(
+					to bottom,
+					#fff,
+					#aaa 100%
+				);
+				box-shadow: inset 0 0 0.25rem rgba(#000,0.125);
+				color: $text;
+				&:hover{
+					color: $text;
+				}
+			}
+
+	.example__content{
+		padding: 2rem;
+		background: #F2FEFF;
+		border-radius: 0.2rem;
+		box-shadow: 0 0 0.5rem rgba(#000,0.2);
+	}

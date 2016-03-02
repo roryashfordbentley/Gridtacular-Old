@@ -1,4 +1,4 @@
-////
+ ////
 // Tools
 //
 // Helpers and silent grid functions 
@@ -91,7 +91,10 @@
 
     #{$grid_prefix}{
         box-sizing: border-box;
-        display: flex;
+        display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* IE 10 */
+        display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* Current Spec - Firefox, Chrome, Opera */
         margin-left: -$gutter;
         flex-direction: row;
         flex: 0 1 auto;
@@ -211,7 +214,11 @@
 ////
 @mixin grid-item-fit($item_class,$suffix: null){
     #{$item_class}fit#{$suffix}{
-        flex: 1 0;
+        
+        -webkit-box-flex: 1 0;   /* OLD - iOS 6-, Safari 3.1-6 */
+        -webkit-flex: 1 0;       /* Safari 6.1+. iOS 7.1+, BB10 */
+        -ms-flex: 1 0;           /* IE 10 */
+        flex: 1 0;               /* NEW, Spec - Firefox, Chrome, Opera */
     }
 }
 
@@ -224,7 +231,10 @@
 ////
 @mixin grid-item-flex($item_class,$suffix: null){
     #{$item_class}flex#{$suffix}{
-        display: flex;
+        display: -webkit-box;  /* iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* IE 10 */
+        display: -webkit-flex; /* Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* Current Spec - Firefox, Chrome, Opera */
     }
 }
 

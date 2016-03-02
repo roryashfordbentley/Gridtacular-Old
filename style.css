@@ -306,7 +306,14 @@ body:after {
 
 .grid {
   box-sizing: border-box;
+  display: -webkit-box;
+  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: -webkit-flex;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
+  /* Current Spec - Firefox, Chrome, Opera */
   margin-left: -24px;
   flex-direction: row;
   flex: 0 1 auto;
@@ -368,11 +375,25 @@ body:after {
 }
 
 .span--fit {
+  -webkit-box-flex: 1 0;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 1 0;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1 0;
+  /* IE 10 */
   flex: 1 0;
+  /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
 .span--flex {
+  display: -webkit-box;
+  /* iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: -webkit-flex;
+  /* Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
+  /* Current Spec - Firefox, Chrome, Opera */
 }
 
 .span--1-12 {
@@ -435,7 +456,14 @@ body:after {
 @media (min-width: 800px) {
   .grid {
     box-sizing: border-box;
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
     margin-left: -24px;
     flex-direction: row;
     flex: 0 1 auto;
@@ -483,10 +511,24 @@ body:after {
     justify-content: space-around;
   }
   .span--fit--m {
+    -webkit-box-flex: 1 0;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1 0;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1 0;
+    /* IE 10 */
     flex: 1 0;
+    /* NEW, Spec - Firefox, Chrome, Opera */
   }
   .span--flex--m {
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
   }
   .span--1-12--m {
     flex-basis: 8.33333%;
@@ -536,7 +578,14 @@ body:after {
 @media (min-width: 1100px) {
   .grid {
     box-sizing: border-box;
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
     margin-left: -24px;
     flex-direction: row;
     flex: 0 1 auto;
@@ -584,10 +633,24 @@ body:after {
     justify-content: space-around;
   }
   .span--fit--l {
+    -webkit-box-flex: 1 0;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1 0;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1 0;
+    /* IE 10 */
     flex: 1 0;
+    /* NEW, Spec - Firefox, Chrome, Opera */
   }
   .span--flex--l {
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
   }
   .span--1-12--l {
     flex-basis: 8.33333%;
@@ -637,7 +700,14 @@ body:after {
 @media (min-width: 1400px) {
   .grid {
     box-sizing: border-box;
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
     margin-left: -24px;
     flex-direction: row;
     flex: 0 1 auto;
@@ -685,10 +755,24 @@ body:after {
     justify-content: space-around;
   }
   .span--fit--xl {
+    -webkit-box-flex: 1 0;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1 0;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1 0;
+    /* IE 10 */
     flex: 1 0;
+    /* NEW, Spec - Firefox, Chrome, Opera */
   }
   .span--flex--xl {
+    display: -webkit-box;
+    /* iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: -webkit-flex;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* Current Spec - Firefox, Chrome, Opera */
   }
   .span--1-12--xl {
     flex-basis: 8.33333%;

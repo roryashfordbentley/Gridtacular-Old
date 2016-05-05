@@ -203,6 +203,8 @@
         // Output item classes
         #{$item_class}{
             flex-basis: item-width($i,$items);
+            // Fix for IE 10/11
+            max-width: item-width($i,$items);
         }
     }
 }

@@ -354,13 +354,14 @@
      
     // Set variable defaults
 
-    $default_grid_name:     "grid";
-    $default_item_name:   "span--";
-    $default_push:          false;
-    $default_push_name:     "push--";
-    $default_omega:         true;
-    $default_debug_display: false;
-    $default_class_debug_display: false;
+    $grid_name:             "grid";
+    $grid_prefix:           #{'.' + $grid_name};
+    $item_name:             "span--";
+    $push:                  false;
+    $push_name:             "push--";
+    $omega:                 true;
+    $debug_display:         false;
+    $class_debug_display:   false;
     
     // Check if the user has submitted defaults
     // If they have then use the user submitted values
@@ -370,55 +371,40 @@
     @if ( map-has-key(map-get($grid_args, config), gridclass) ) {
         $grid_name: map-get-z($grid_args, config, gridclass);
         $grid_prefix: #{'.' + map-get-z($grid_args, config, gridclass)};
-    } @else {
-        $grid_name: $default_grid_name;
-        $grid_prefix: #{'.' + $grid_name}
     }
 
     // If item class has been defined
     @if ( map-has-key(map-get($grid_args, config), itemclass) ) {
         $item_name: map-get-z($grid_args, config, itemclass)
-    } @else {
-        $item_name: $default_item_name;
     }
 
     //If push has been defined
     @if (map-has-key(map-get($grid_args, config), push)) {
         $push: map-get-z($grid_args, config, push)
-    } @else{
-        $push: $default_push;
     }
 
     // If pushclass has been defined    
     @if (map-has-key(map-get($grid_args, config), pushclass)) {
         $push_name: map-get-z($grid_args, config, pushclass);
-    } @else{
-        $push_name: $default_push_name;
     }
 
     // If omega has been defined
     @if (map-has-key(map-get($grid_args, config), omega)) {
         $omega: map-get-z($grid_args, config, omega);
-    } @else{
-        $omega: $default_omega
     }
 
     // If debug_display has been defined    
     @if (map-has-key(map-get($grid_args, config), debug)) {
         $debug_display: map-get-z($grid_args, config, debug);
-    } @else{
-        $debug_display: $default_debug_display;
     }
 
     // If debug_display has been defined
     @if (map-has-key(map-get($grid_args, config), classdebug)) {
         $class_debug_display: map-get-z($grid_args, config, classdebug);
-    } @else{
-        $class_debug_display: $default_class_debug_display;
     }
 
     // if grid include breakpoint debug box
-    @if($debug_display){ 
+    @if variable-exists(debug_display){
         @include grid-debug();
     } 
 
@@ -434,61 +420,47 @@
 
             // Set defaults
 
-            $default_items:           12;
-            $default_suffix:            null;
-            $default_breakpoint_min:    null;
-            $default_breakpoint_max:    null;
-            $default_gutter:            24px;
-            $default_debug_bg:          #000;
-            $default_debug_name:        $grid_name;
+            $items:             12;
+            $suffix:            null;
+            $breakpoint_min:    null;
+            $breakpoint_max:    null;
+            $gutter:            24px;
+            $debug_bg:          #000;
+            $debug_name:        $grid_name;
 
             // If item class has been defined
             @if ( map-has-key($grid_map, items) ) {
                 $items: map-get($grid_map,items);
-            } @else {
-                $items: $default_items;
             }
 
             // If item class has been defined
             @if ( map-has-key($grid_map, suffix) ) {
                 $suffix: map-get($grid_map,suffix)
-            } @else {
-                $suffix: $default_suffix;
             }
 
             // If breakpoint min has been defined
             @if ( map-has-key($grid_map, breakpoint_min) ) {
                 $breakpoint_min: map-get($grid_map,breakpoint_min);
-            } @else {
-                $breakpoint_min: $default_breakpoint_min
             }
 
             // If breakpoint max has been defined
             @if ( map-has-key($grid_map, breakpoint_max) ) {
                 $breakpoint_max: map-get($grid_map,breakpoint_max);
-            } @else {
-                $breakpoint_max: $default_breakpoint_max;
             }
 
             // If gutter has been defined
             @if ( map-has-key($grid_map, gutter) ) {
                 $gutter:  map-get($grid_map,gutter);
-            } @else {
-                $gutter: $default_gutter;
             }
 
             // If debug_bg is defined
             @if ( map-has-key($grid_map, debug_bg) ) {
                 $debug_bg:  map-get($grid_map,debug_bg);
-            } @else {
-                $debug_bg: $default_debug_bg;
             }
 
             // If debug_name is defined
             @if ( map-has-key($grid_map, debug_name) ) {
                 $debug_name:  map-get($grid_map,debug_name);
-            } @else {
-                $debug_name: $default_debug_name;
             }
 
             // Include the necessary mixins to generate the grids
